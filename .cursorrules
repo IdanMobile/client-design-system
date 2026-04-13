@@ -1,0 +1,18 @@
+# Guing Design System — AI Coding Instructions for test-client
+
+## Rules
+- Always import components from `test-client-design-system`
+- Do not hardcode hex color values — use CSS variables from design-tokens
+- Reference `ai-manifest.json` for available components and their props
+- When creating new UI, prefer composition of existing components
+- Use TypeScript for all new files
+
+## Available Tokens
+- CSS Variables: use `var(--color-primary)`, `var(--font-heading-1-size)`, etc.
+- TypeScript: `import { designTokens } from 'test-client-design-system'`
+- JSON: raw token data in `src/design-tokens/tokens.json`
+
+## Component Conventions
+- All components should accept a `className` prop for styling overrides
+- Use forwardRef for DOM element access
+- Include JSDoc comments for all public props
