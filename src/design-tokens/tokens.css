@@ -25,8 +25,8 @@
   --color-grey-secondary-body-text-rgb: 144, 163, 177;
   --color-white-white: #FFFFFF;
   --color-white-white-rgb: 255, 255, 255;
-  --color-blue-blue: #4A30F3;
-  --color-blue-blue-rgb: 74, 48, 243;
+  --color-blue-blue: #AC37BC;
+  --color-blue-blue-rgb: 172, 55, 188;
   --color-red-red-warning: #FF4B4A;
   --color-red-red-warning-rgb: 255, 75, 74;
   --color-red-red-error: #C84747;
@@ -45,10 +45,10 @@
   --color-color-10px-rgb: 255, 255, 255;
   --color-shadow-color: #000000;
   --color-shadow-color-rgb: 0, 0, 0;
-  --color-brand-500: #4A30F3;
-  --color-brand-500-rgb: 74, 48, 243;
-  --color-action-primary: #4A30F3;
-  --color-action-primary-rgb: 74, 48, 243;
+  --color-brand-500: #AC37BC;
+  --color-brand-500-rgb: 172, 55, 188;
+  --color-action-primary: #AC37BC;
+  --color-action-primary-rgb: 172, 55, 188;
   --color-action-secondary: #9B5DFF;
   --color-action-secondary-rgb: 155, 93, 255;
   --color-success-500: #25A96B;
