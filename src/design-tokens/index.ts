@@ -66,7 +66,7 @@ export const tokens = {
     },
     {
       "name": "blue/blue",
-      "value": "#4A30F3",
+      "value": "#AC37BC",
       "category": "Variables"
     },
     {
@@ -116,12 +116,12 @@ export const tokens = {
     },
     {
       "name": "Brand 500",
-      "value": "#4A30F3",
+      "value": "#AC37BC",
       "category": "Variables"
     },
     {
       "name": "Action Primary",
-      "value": "#4A30F3",
+      "value": "#AC37BC",
       "category": "Variables"
     },
     {
@@ -704,8 +704,8 @@ export const designTokens = {
     greySecondaryBodyText: "#90A3B1",
     /** #FFFFFF */
     whiteWhite: "#FFFFFF",
-    /** #4A30F3 */
-    blueBlue: "#4A30F3",
+    /** #AC37BC */
+    blueBlue: "#AC37BC",
     /** #FF4B4A */
     redRedWarning: "#FF4B4A",
     /** #C84747 */
@@ -724,10 +724,10 @@ export const designTokens = {
     color10px: "#FFFFFF",
     /** #000000 */
     shadowColor: "#000000",
-    /** #4A30F3 */
-    brand500: "#4A30F3",
-    /** #4A30F3 */
-    actionPrimary: "#4A30F3",
+    /** #AC37BC */
+    brand500: "#AC37BC",
+    /** #AC37BC */
+    actionPrimary: "#AC37BC",
     /** #9B5DFF */
     actionSecondary: "#9B5DFF",
     /** #25A96B */
