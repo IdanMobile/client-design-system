@@ -1,20 +1,141 @@
 {
-  "version": "0.0.0",
-  "generatedAt": "2026-04-13T12:05:21.470Z",
-  "components": [],
+  "version": "0.0.1",
+  "generatedAt": "2026-04-15T16:06:39.957Z",
+  "components": [
+    {
+      "name": "Blurs",
+      "path": "src/components/Blurs/Blurs.tsx",
+      "description": "Blurs component",
+      "props": {}
+    },
+    {
+      "name": "Borders",
+      "path": "src/components/Borders/Borders.tsx",
+      "description": "Borders component",
+      "props": {}
+    },
+    {
+      "name": "Colors",
+      "path": "src/components/Colors/Colors.tsx",
+      "description": "Colors component",
+      "props": {}
+    },
+    {
+      "name": "Elevations",
+      "path": "src/components/Elevations/Elevations.tsx",
+      "description": "Elevations component",
+      "props": {}
+    },
+    {
+      "name": "Gaps",
+      "path": "src/components/Gaps/Gaps.tsx",
+      "description": "Gaps component",
+      "props": {}
+    },
+    {
+      "name": "Grids",
+      "path": "src/components/Grids/Grids.tsx",
+      "description": "Grids component",
+      "props": {}
+    },
+    {
+      "name": "Icons",
+      "path": "src/components/Icons/Icons.tsx",
+      "description": "Icons component",
+      "props": {}
+    },
+    {
+      "name": "InjectionView",
+      "path": "src/components/InjectionView.tsx",
+      "description": "InjectionView component",
+      "props": {
+        "libraryName": {
+          "type": "string",
+          "required": true
+        },
+        "approach": {
+          "type": "string",
+          "required": true
+        },
+        "bindings": {
+          "type": "TokenBinding[]",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "ModelMap",
+      "path": "src/components/ModelMap/ModelMap.tsx",
+      "description": "ModelMap component",
+      "props": {}
+    },
+    {
+      "name": "Opacity",
+      "path": "src/components/Opacity/Opacity.tsx",
+      "description": "Opacity component",
+      "props": {}
+    },
+    {
+      "name": "Radius",
+      "path": "src/components/Radius/Radius.tsx",
+      "description": "Radius component",
+      "props": {}
+    },
+    {
+      "name": "Shadows",
+      "path": "src/components/Shadows/Shadows.tsx",
+      "description": "Shadows component",
+      "props": {}
+    },
+    {
+      "name": "Sizes",
+      "path": "src/components/Sizes/Sizes.tsx",
+      "description": "Sizes component",
+      "props": {}
+    },
+    {
+      "name": "Text",
+      "path": "src/components/Text/Text.tsx",
+      "description": "Text component",
+      "props": {}
+    },
+    {
+      "name": "TokenMapView",
+      "path": "src/components/TokenMapView.tsx",
+      "description": "TokenMapView component",
+      "props": {}
+    },
+    {
+      "name": "Typography",
+      "path": "src/components/Typography/Typography.tsx",
+      "description": "Typography component",
+      "props": {}
+    },
+    {
+      "name": "Welcome",
+      "path": "src/components/Welcome/Welcome.tsx",
+      "description": "Welcome component",
+      "props": {}
+    }
+  ],
   "tokens": {
-    "colors": 0,
-    "gradients": 0,
-    "typography": 0,
-    "radius": 0,
+    "colors": 33,
+    "typography": 14,
+    "radius": 11,
     "shadows": 0,
     "elevations": 0,
     "borders": 0,
-    "gaps": 0,
-    "sizes": 0,
+    "gaps": 8,
+    "sizes": 25,
     "opacity": 0,
+    "gradients": 3,
     "blurs": 0,
     "layoutGrids": 0,
     "icons": 0
+  },
+  "library": {
+    "id": "mui",
+    "label": "Material UI",
+    "importPackage": "@mui/material"
   }
 }
