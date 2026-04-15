@@ -23,5 +23,8 @@ export * from './components/TokenMapView';
 export * from './components/Typography/Typography';
 export * from './components/Welcome/Welcome';
 
+// AI-Generated Components
+export * from './components/Button';
+
 // Library Adapter
-export { DesignSystemProvider, designSystemTheme, Button, ButtonGroup, Checkbox, Fab, IconButton, Radio, RadioGroup, Rating, Select, Slider, Switch, TextField, ToggleButton, ToggleButtonGroup, Autocomplete, FormControlLabel, FormControl, FormLabel, MenuItem, Avatar, Badge, Chip, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Tooltip, Alert, CircularProgress, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, LinearProgress, Skeleton, Snackbar, Breadcrumbs, Drawer, Menu, Pagination, Step, StepLabel, Stepper, Tab, Tabs, Accordion, AccordionDetails, AccordionSummary, AppBar, Card, CardActions, CardContent, Paper, Toolbar, Box, Link } from './components/adapters/mui';
+export { DesignSystemProvider, designSystemTheme, ButtonGroup, Checkbox, Fab, IconButton, Radio, RadioGroup, Rating, Select, Slider, Switch, TextField, ToggleButton, ToggleButtonGroup, Autocomplete, FormControlLabel, FormControl, FormLabel, MenuItem, Avatar, Badge, Chip, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Tooltip, Alert, CircularProgress, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, LinearProgress, Skeleton, Snackbar, Breadcrumbs, Drawer, Menu, Pagination, Step, StepLabel, Stepper, Tab, Tabs, Accordion, AccordionDetails, AccordionSummary, AppBar, Card, CardActions, CardContent, Paper, Toolbar, Box, Link } from './components/adapters/mui';

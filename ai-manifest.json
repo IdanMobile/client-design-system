@@ -1,6 +1,6 @@
 {
-  "version": "0.0.2",
-  "generatedAt": "2026-04-15T16:41:09.795Z",
+  "version": "0.0.3",
+  "generatedAt": "2026-04-15T16:50:10.506Z",
   "components": [
     {
       "name": "Blurs",
@@ -116,6 +116,48 @@
       "path": "src/components/Welcome/Welcome.tsx",
       "description": "Welcome component",
       "props": {}
+    },
+    {
+      "name": "Button (Primary)",
+      "path": "src/components/ButtonPrimary/ButtonPrimary.tsx",
+      "description": "Button (Primary) component",
+      "props": {
+        "onClick": {
+          "type": "() => void",
+          "required": false,
+          "description": "Click handler for the button."
+        },
+        "onHover": {
+          "type": "() => void",
+          "required": false,
+          "description": "Mouse enter handler for hover state."
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "Disables the button when true."
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false,
+          "description": "Shows a loading spinner when true."
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "Content of the button."
+        },
+        "sx": {
+          "type": "SxProps",
+          "required": false,
+          "description": "Style overrides."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Class name for styling overrides."
+        }
+      }
     }
   ],
   "tokens": {
