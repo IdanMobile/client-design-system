@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import type { Preview } from '@storybook/react';
 import tokens from '../src/design-tokens/tokens.json';
 import '../src/design-tokens/tokens.css';
-
 const themes = (tokens as any).themes ? Object.keys((tokens as any).themes) : [];
 
 const preview: Preview = {

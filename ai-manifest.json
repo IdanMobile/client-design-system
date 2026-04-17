@@ -1,20 +1,255 @@
 {
-  "version": "0.0.0",
-  "generatedAt": "2026-04-17T10:49:05.699Z",
-  "components": [],
+  "version": "0.0.4",
+  "generatedAt": "2026-04-17T10:51:24.349Z",
+  "components": [
+    {
+      "name": "Blurs",
+      "path": "src/components/Blurs/Blurs.tsx",
+      "description": "Blurs component",
+      "props": {}
+    },
+    {
+      "name": "Borders",
+      "path": "src/components/Borders/Borders.tsx",
+      "description": "Borders component",
+      "props": {}
+    },
+    {
+      "name": "Colors",
+      "path": "src/components/Colors/Colors.tsx",
+      "description": "Colors component",
+      "props": {}
+    },
+    {
+      "name": "Elevations",
+      "path": "src/components/Elevations/Elevations.tsx",
+      "description": "Elevations component",
+      "props": {}
+    },
+    {
+      "name": "Gaps",
+      "path": "src/components/Gaps/Gaps.tsx",
+      "description": "Gaps component",
+      "props": {}
+    },
+    {
+      "name": "Grids",
+      "path": "src/components/Grids/Grids.tsx",
+      "description": "Grids component",
+      "props": {}
+    },
+    {
+      "name": "Icons",
+      "path": "src/components/Icons/Icons.tsx",
+      "description": "Icons component",
+      "props": {}
+    },
+    {
+      "name": "InjectionView",
+      "path": "src/components/InjectionView.tsx",
+      "description": "InjectionView component",
+      "props": {
+        "libraryName": {
+          "type": "string",
+          "required": true
+        },
+        "approach": {
+          "type": "string",
+          "required": true
+        },
+        "bindings": {
+          "type": "TokenBinding[]",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "ModelMap",
+      "path": "src/components/ModelMap/ModelMap.tsx",
+      "description": "ModelMap component",
+      "props": {}
+    },
+    {
+      "name": "Opacity",
+      "path": "src/components/Opacity/Opacity.tsx",
+      "description": "Opacity component",
+      "props": {}
+    },
+    {
+      "name": "Radius",
+      "path": "src/components/Radius/Radius.tsx",
+      "description": "Radius component",
+      "props": {}
+    },
+    {
+      "name": "Shadows",
+      "path": "src/components/Shadows/Shadows.tsx",
+      "description": "Shadows component",
+      "props": {}
+    },
+    {
+      "name": "Sizes",
+      "path": "src/components/Sizes/Sizes.tsx",
+      "description": "Sizes component",
+      "props": {}
+    },
+    {
+      "name": "Text",
+      "path": "src/components/Text/Text.tsx",
+      "description": "Text component",
+      "props": {}
+    },
+    {
+      "name": "TokenMapView",
+      "path": "src/components/TokenMapView.tsx",
+      "description": "TokenMapView component",
+      "props": {}
+    },
+    {
+      "name": "Typography",
+      "path": "src/components/Typography/Typography.tsx",
+      "description": "Typography component",
+      "props": {}
+    },
+    {
+      "name": "Welcome",
+      "path": "src/components/Welcome/Welcome.tsx",
+      "description": "Welcome component",
+      "props": {}
+    },
+    {
+      "name": "Button (Primary)",
+      "path": "src/components/ButtonPrimary/ButtonPrimary.tsx",
+      "description": "Button (Primary) component",
+      "props": {
+        "onClick": {
+          "type": "() => void",
+          "required": false,
+          "description": "Click handler"
+        },
+        "onHover": {
+          "type": "() => void",
+          "required": false,
+          "description": "Mouse enter handler"
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "Disabled state"
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false,
+          "description": "Loading state"
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "Content of the button"
+        },
+        "sx": {
+          "type": "SxProps",
+          "required": false,
+          "description": "Style overrides"
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Class name overrides"
+        },
+        "type": {
+          "type": "'text' | 'icon'",
+          "required": false,
+          "description": "Type of button"
+        },
+        "size": {
+          "type": "'lg' | 'md' | 'sm' | 'xs'",
+          "required": false,
+          "description": "Size of the button"
+        },
+        "width": {
+          "type": "'compact' | 'fluid'",
+          "required": false,
+          "description": "Width of the button"
+        }
+      }
+    },
+    {
+      "name": "Button (Outline)",
+      "path": "src/components/ButtonOutline/ButtonOutline.tsx",
+      "description": "Button (Outline) component",
+      "props": {
+        "onClick": {
+          "type": "() => void",
+          "required": false,
+          "description": "Click handler"
+        },
+        "onHover": {
+          "type": "() => void",
+          "required": false,
+          "description": "Mouse enter handler"
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "Disabled state"
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false,
+          "description": "Loading state"
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "Content of the button"
+        },
+        "sx": {
+          "type": "SxProps",
+          "required": false,
+          "description": "Style overrides"
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Class name overrides"
+        },
+        "type": {
+          "type": "'text' | 'icon'",
+          "required": false,
+          "description": "Button type: text or icon"
+        },
+        "size": {
+          "type": "'lg' | 'md' | 'sm' | 'xs'",
+          "required": false,
+          "description": "Button size"
+        },
+        "width": {
+          "type": "'compact' | 'fluid'",
+          "required": false,
+          "description": "Button width"
+        }
+      }
+    }
+  ],
   "tokens": {
-    "colors": 0,
-    "gradients": 0,
-    "typography": 0,
-    "radius": 0,
+    "colors": 270,
+    "typography": 52,
+    "radius": 13,
     "shadows": 0,
     "elevations": 0,
     "borders": 0,
-    "gaps": 0,
-    "sizes": 0,
+    "gaps": 20,
+    "sizes": 57,
     "opacity": 0,
+    "gradients": 1,
     "blurs": 0,
     "layoutGrids": 0,
     "icons": 0
+  },
+  "library": {
+    "id": "mui",
+    "label": "Material UI",
+    "importPackage": "@mui/material"
   }
 }
