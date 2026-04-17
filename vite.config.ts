@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'design-system-template',
+      name: 'test-client',
       fileName: 'index',
       formats: ['es', 'cjs'],
     },
