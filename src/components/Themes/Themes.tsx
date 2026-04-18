@@ -73,8 +73,8 @@ export const Themes = () => {
                 border: '1px solid #e5e7eb',
                 borderRadius: '16px',
                 padding: '2rem',
-                background: 'var(--color-surface)',
-                color: 'var(--color-text-main)',
+                background: 'var(--color-surface, #ffffff)',
+                color: 'var(--color-text-main, #111827)',
                 transition: 'all 0.2s ease',
               }}
             >
