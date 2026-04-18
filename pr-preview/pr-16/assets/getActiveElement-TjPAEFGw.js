@@ -1,0 +1,1 @@
+import{o as n}from"./ownerDocument-DW-IO8s5.js";function i(e){return n(e).defaultView||window}function c(e){var t;let o=e.activeElement;for(;((t=o==null?void 0:o.shadowRoot)==null?void 0:t.activeElement)!=null;)o=o.shadowRoot.activeElement;return o}export{c as a,i as o};
