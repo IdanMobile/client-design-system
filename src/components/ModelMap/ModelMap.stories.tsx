@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Welcome } from './Welcome';
+import { ModelMap } from './ModelMap';
 
 const meta = {
-  title: 'System/Welcome',
-  component: Welcome,
+  title: 'System/Tokens/Model Map',
+  component: ModelMap,
   parameters: {
-    layout: 'padded',
+    layout: 'fullscreen',
   },
-};
+} satisfies Meta<typeof ModelMap>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
