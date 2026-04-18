@@ -1,6 +1,6 @@
 {
-  "version": "0.0.4",
-  "generatedAt": "2026-04-18T17:01:11.530Z",
+  "version": "0.0.5",
+  "generatedAt": "2026-04-18T17:02:41.498Z",
   "components": [
     {
       "name": "Blurs",
@@ -140,21 +140,80 @@
       "path": "src/components/Welcome/Welcome.tsx",
       "description": "Welcome component",
       "props": {}
+    },
+    {
+      "name": "Button (Outline)",
+      "path": "src/components/ButtonOutline/ButtonOutline.tsx",
+      "description": "Button (Outline) component",
+      "props": {
+        "isDisabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "Disable interaction and apply the Figma \"Disabled\" variant styling."
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false,
+          "description": "Replace children with a centered spinner and disable the button."
+        },
+        "onHover": {
+          "type": "() => void",
+          "required": false,
+          "description": "Mouse-enter handler (wraps onMouseEnter for API parity with other DS primitives)."
+        },
+        "icon": {
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "Optional leading icon slot (renders before children)."
+        }
+      }
+    },
+    {
+      "name": "Button (Primary)",
+      "path": "src/components/ButtonPrimary/ButtonPrimary.tsx",
+      "description": "Button (Primary) component",
+      "props": {
+        "isDisabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "Disable interaction and apply the Figma \"Disabled\" variant styling."
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false,
+          "description": "Replace children with a centered spinner and disable the button."
+        },
+        "onHover": {
+          "type": "() => void",
+          "required": false,
+          "description": "Mouse-enter handler (wraps onMouseEnter for API parity with other DS primitives)."
+        },
+        "icon": {
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "Optional leading icon slot (renders before children)."
+        }
+      }
     }
   ],
   "tokens": {
-    "colors": 0,
-    "typography": 0,
-    "radius": 4,
+    "colors": 295,
+    "typography": 52,
+    "radius": 13,
     "shadows": 0,
     "elevations": 0,
-    "borders": 0,
-    "gaps": 10,
-    "sizes": 6,
+    "borders": 2,
+    "gaps": 30,
+    "sizes": 73,
     "opacity": 9,
-    "gradients": 0,
+    "gradients": 1,
     "blurs": 0,
     "layoutGrids": 0,
     "icons": 0
+  },
+  "library": {
+    "id": "mui",
+    "label": "Material UI",
+    "importPackage": "@mui/material"
   }
 }
