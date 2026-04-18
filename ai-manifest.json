@@ -1,6 +1,6 @@
 {
-  "version": "0.0.4",
-  "generatedAt": "2026-04-18T17:01:11.530Z",
+  "version": "0.0.5",
+  "generatedAt": "2026-04-18T20:23:45.785Z",
   "components": [
     {
       "name": "Blurs",
@@ -140,21 +140,133 @@
       "path": "src/components/Welcome/Welcome.tsx",
       "description": "Welcome component",
       "props": {}
+    },
+    {
+      "name": "Button (Primary)",
+      "path": "src/components/ButtonPrimary/ButtonPrimary.tsx",
+      "description": "Button (Primary) component",
+      "props": {
+        "onClick": {
+          "type": "() => void",
+          "required": false,
+          "description": "Click handler for the button."
+        },
+        "onHover": {
+          "type": "() => void",
+          "required": false,
+          "description": "Mouse enter handler for the button."
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "Disables the button when true."
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false,
+          "description": "Shows a loading spinner when true."
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "Content of the button."
+        },
+        "sx": {
+          "type": "SxProps",
+          "required": false,
+          "description": "Style overrides."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Class name for styling overrides."
+        },
+        "type": {
+          "type": "'text' | 'icon'",
+          "required": false,
+          "description": "Type of button, either 'text' or 'icon'."
+        },
+        "size": {
+          "type": "'lg' | 'md' | 'sm' | 'xs'",
+          "required": false,
+          "description": "Size of the button, either 'lg', 'md', 'sm', or 'xs'."
+        },
+        "width": {
+          "type": "'compact' | 'fluid'",
+          "required": false,
+          "description": "Width of the button, either 'compact' or 'fluid'."
+        }
+      }
+    },
+    {
+      "name": "Button (Outline)",
+      "path": "src/components/ButtonOutline/ButtonOutline.tsx",
+      "description": "Button (Outline) component",
+      "props": {
+        "onClick": {
+          "type": "() => void",
+          "required": false
+        },
+        "onHover": {
+          "type": "() => void",
+          "required": false
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "sx": {
+          "type": "SxProps",
+          "required": false
+        },
+        "className": {
+          "type": "string",
+          "required": false
+        },
+        "type": {
+          "type": "'text' | 'icon'",
+          "required": false,
+          "description": "Type of the button: 'text' or 'icon'."
+        },
+        "size": {
+          "type": "'lg' | 'md' | 'sm' | 'xs'",
+          "required": false,
+          "description": "Size of the button: 'lg', 'md', 'sm', or 'xs'."
+        },
+        "width": {
+          "type": "'compact' | 'fluid'",
+          "required": false,
+          "description": "Width of the button: 'compact' or 'fluid'."
+        }
+      }
     }
   ],
   "tokens": {
-    "colors": 0,
-    "typography": 0,
-    "radius": 4,
+    "colors": 295,
+    "typography": 52,
+    "radius": 13,
     "shadows": 0,
     "elevations": 0,
-    "borders": 0,
-    "gaps": 10,
-    "sizes": 6,
-    "opacity": 9,
-    "gradients": 0,
+    "borders": 2,
+    "gaps": 20,
+    "sizes": 67,
+    "opacity": 0,
+    "gradients": 1,
     "blurs": 0,
     "layoutGrids": 0,
     "icons": 0
+  },
+  "library": {
+    "id": "mui",
+    "label": "Material UI",
+    "importPackage": "@mui/material"
   }
 }

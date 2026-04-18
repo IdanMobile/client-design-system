@@ -16,7 +16,7 @@ export const Opacity = () => {
               <div style={{
                 width: '100%',
                 height: '80px',
-                background: '#667eea',
+                background: 'var(--color-primary)',
                 opacity: o.opacity,
                 borderRadius: '8px'
               }} />

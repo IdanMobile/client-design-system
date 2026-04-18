@@ -16,7 +16,7 @@ export const Gaps = () => {
           {gaps.map((g: any) => (
             <div key={g.name} style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', padding: '0.5rem 0', borderBottom: '1px solid #f9f9f9' }}>
               <div style={{ width: '140px', fontWeight: 'bold', fontSize: '0.9rem' }}>{g.name}</div>
-              <div style={{ width: `${g.value}px`, height: '20px', background: '#667eea', borderRadius: '2px' }} />
+              <div style={{ width: `${g.value}px`, height: '20px', background: 'var(--color-primary)', borderRadius: '2px' }} />
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem', minWidth: '100px' }}>
                 <div style={{ color: '#555', fontFamily: 'monospace', fontSize: '0.8rem' }}>size: {g.value}px</div>
                 <div style={{ color: '#aaa', fontFamily: 'monospace', fontSize: '0.7rem' }}>var: --gap-{toKebab(g.name)}</div>

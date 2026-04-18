@@ -16,7 +16,7 @@ export const Sizes = () => {
           {sizes.map((s: any) => (
             <div key={s.name} style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', padding: '1rem', border: '1px solid #f0f0f0', borderRadius: '8px' }}>
               <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '160px', background: '#fcfcfc', borderRadius: '4px' }}>
-                <div style={{ width: `${Math.min(s.value, 140)}px`, height: `${Math.min(s.value, 140)}px`, background: '#764ba2', borderRadius: '4px', boxShadow: '0 4px 12px rgba(118,75,162,0.15)' }} />
+                <div style={{ width: `${Math.min(s.value, 140)}px`, height: `${Math.min(s.value, 140)}px`, background: 'var(--color-primary)', borderRadius: '4px' }} />
               </div>
               <div style={{ fontWeight: 'bold', fontSize: '0.9rem' }}>{s.name}</div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>

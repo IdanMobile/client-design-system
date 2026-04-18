@@ -17,7 +17,7 @@ export const Blurs = () => {
                 <div style={{
                   position: 'absolute',
                   inset: 0,
-                  background: 'linear-gradient(45deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%)'
+                  background: 'linear-gradient(45deg, var(--color-primary), var(--color-secondary, var(--color-primary)))'
                 }} />
                 <div style={{
                   position: 'absolute',
