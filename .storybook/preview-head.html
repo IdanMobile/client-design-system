@@ -1,0 +1,73 @@
+<!--
+  Storybook preview head overrides.
+
+  Storybook ships with defaults that are way too roomy for a component
+  catalog: 1rem on the canvas, ~3rem vertical margin between stories in
+  Docs, plus Mui Typography's default bottom margins stack up inside each
+  story. This sheet keeps the catalog dense so small components don't
+  swim in whitespace while still leaving enough air to breathe.
+-->
+<style>
+  /* ── Canvas (single-story iframe) ───────────────────────────────────── */
+  /* Default .sb-main-padded is 1rem all around — tighten to 0.75rem. */
+  .sb-show-main.sb-main-padded,
+  #storybook-root.sb-main-padded {
+    padding: 0.75rem !important;
+  }
+  /* Centered layout: no extra padding, centering alone is enough. */
+  .sb-show-main.sb-main-centered,
+  #storybook-root.sb-main-centered {
+    padding: 0 !important;
+  }
+
+  /* ── Docs page (multiple stories stacked) ───────────────────────────── */
+  /* The default .docs-story block has ~25px top + 40px bottom margin and
+     30px inner padding. That produces ~135px between every story. Shrink
+     to a single consistent gap. */
+  .docs-story {
+    margin: 0 0 1rem 0 !important;
+  }
+  .docs-story > div {
+    padding: 0.75rem 1rem !important;
+  }
+  /* The wrapper that holds the actual rendered story inside each block. */
+  .docs-story [class*="innerZoomElementWrapper"] > div {
+    padding: 0 !important;
+  }
+  /* Docs "Stories" section headers sit on top of a giant block margin —
+     collapse that too. */
+  .sbdocs.sbdocs-content > * + * {
+    margin-top: 1.25rem;
+  }
+  .sbdocs.sbdocs-h2,
+  .sbdocs.sbdocs-h3 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* ── Reset stacking margins that leak in from component libs ───────── */
+  /* MUI CssBaseline does NOT strip Typography's bottom margin. Inside a
+     story that's a run of <Typography> components, each adds ~0.35em of
+     vertical space that compounds. We reset it here; apps that want the
+     margin back can override at component level. */
+  .MuiTypography-root {
+    margin: 0;
+  }
+  /* Tailwind preflight already zeroes margins, but some libs (shadcn,
+     flowbite) ship with `.prose`-style body styles that re-introduce
+     heading margins. Neutralise the first-child of every story. */
+  #storybook-root > *:first-child,
+  .docs-story [class*="innerZoomElementWrapper"] > div > *:first-child {
+    margin-top: 0 !important;
+  }
+  #storybook-root > *:last-child,
+  .docs-story [class*="innerZoomElementWrapper"] > div > *:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* ── Body reset ─────────────────────────────────────────────────────── */
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+</style>
