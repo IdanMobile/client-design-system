@@ -1,1 +1,0 @@
-import{r as t}from"./index-DCXu2c-y.js";import{u as c}from"./DefaultPropsProvider-xPzKZ8Sk.js";function o(r){const e=t.useRef(r);return c(()=>{e.current=r}),t.useRef((...u)=>(0,e.current)(...u)).current}export{o as u};
