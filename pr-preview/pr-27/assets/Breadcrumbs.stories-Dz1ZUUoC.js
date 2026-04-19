@@ -1,7 +1,0 @@
-import{j as r}from"./jsx-runtime-D_zvdyIk.js";import{w as m}from"./decorator-nbTROEqv.js";import{B as s,L as o}from"./Link-Dx8dYkvn.js";import{T as p}from"./Typography-Di__opKi.js";import"./tokens-cxwIOcF3.js";import"./DefaultPropsProvider-Dvarb5rE.js";import"./index-DCXu2c-y.js";/* empty css               */import"./createSvgIcon-D47AKXkk.js";import"./ButtonBase-qaOHKnqS.js";import"./useTimeout-BCS2DETX.js";import"./useForkRef-BdVMMcKE.js";import"./useEventCallback-O7DVlRIu.js";import"./isFocusVisible-B8k4qzLc.js";import"./useSlotProps-DbPfxOuf.js";import"./mergeSlotProps-RT1wQWY9.js";import"./useTheme-PFRGG5dc.js";import"./createSimplePaletteValueFilter-bm0fmN_7.js";const v={title:"System/Library Components (MUI)/Breadcrumbs",component:s,decorators:[m],parameters:{layout:"centered"}},e={render:()=>r.jsxs(s,{children:[r.jsx(o,{underline:"hover",color:"inherit",href:"#",children:"Design System"}),r.jsx(o,{underline:"hover",color:"inherit",href:"#",children:"Tokens"}),r.jsx(p,{color:"text.primary",children:"Colors"})]})};var t,i,n;e.parameters={...e.parameters,docs:{...(t=e.parameters)==null?void 0:t.docs,source:{originalSource:`{
-  render: () => <Breadcrumbs>
-      <Link underline="hover" color="inherit" href="#">Design System</Link>
-      <Link underline="hover" color="inherit" href="#">Tokens</Link>
-      <Typography color="text.primary">Colors</Typography>
-    </Breadcrumbs>
-}`,...(n=(i=e.parameters)==null?void 0:i.docs)==null?void 0:n.source}}};const C=["Default"];export{e as Default,C as __namedExportsOrder,v as default};
