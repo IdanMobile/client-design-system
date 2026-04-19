@@ -1,0 +1,19 @@
+import{j as e}from"./jsx-runtime-D_zvdyIk.js";import{R as T}from"./index-DCXu2c-y.js";import{B as w}from"./Button-DoEnHtwV.js";import{C as z}from"./CircularProgress-DXkKEIgb.js";import{S as L}from"./star-DL9v8gqC.js";import"./DefaultPropsProvider-Dvarb5rE.js";import"./createSimplePaletteValueFilter-bm0fmN_7.js";import"./ButtonBase-qaOHKnqS.js";import"./useTimeout-BCS2DETX.js";import"./useForkRef-BdVMMcKE.js";import"./useEventCallback-O7DVlRIu.js";import"./isFocusVisible-B8k4qzLc.js";const n=T.forwardRef(({onClick:S,onHover:R,isDisabled:D,isLoading:i,children:j,sx:q,className:B},P)=>e.jsx(w,{ref:P,onClick:S,onMouseEnter:R,disabled:D||i,className:B,sx:{display:"flex",alignItems:"center",justifyContent:"center",paddingLeft:"var(--dimension-24---1-5-rem)",paddingRight:"var(--dimension-24---1-5-rem)",borderRadius:"var(--radius-border-radius-lg)",fontSize:"var(--font-text-md-l-24-medium-size)",fontFamily:"var(--font-text-md-l-24-medium-family)",fontWeight:"var(--font-text-md-l-24-medium-weight)",letterSpacing:"var(--body-md-letter-spacing)",lineHeight:"var(--body-md-line-height-24)","&:hover":{backgroundColor:"var(--color-background-state-interaction-hover-primary)"},"&:disabled":{backgroundColor:"var(--color-background-state-interaction-disabled-neutral)",color:"var(--color-text-neutral-subtle-300)"},...q},children:i?e.jsx(z,{size:24}):j}));n.displayName="ButtonPrimary";n.__docgenInfo={description:"ButtonPrimary component for primary actions.",methods:[],displayName:"ButtonPrimary",props:{onClick:{required:!1,tsType:{name:"signature",type:"function",raw:"() => void",signature:{arguments:[],return:{name:"void"}}},description:"Click event handler."},onHover:{required:!1,tsType:{name:"signature",type:"function",raw:"() => void",signature:{arguments:[],return:{name:"void"}}},description:"Mouse enter event handler."},isDisabled:{required:!1,tsType:{name:"boolean"},description:"Disables the button if true."},isLoading:{required:!1,tsType:{name:"boolean"},description:"Shows a loading spinner if true."},children:{required:!1,tsType:{name:"ReactReactNode",raw:"React.ReactNode"},description:"Content of the button."},sx:{required:!1,tsType:{name:"SxProps"},description:"Style overrides."},className:{required:!1,tsType:{name:"string"},description:"Class name for styling overrides."}}};const K={title:"Components/Button/Primary",component:n,args:{children:"Click me"}},r={},a={args:{isLoading:!0}},o={args:{isDisabled:!0}},t={args:{children:e.jsxs(e.Fragment,{children:[e.jsx(L,{size:16})," Click me"]})}},s={args:{sx:{backgroundColor:"var(--color-background-state-interaction-hover-primary)"}}};var d,c,m;r.parameters={...r.parameters,docs:{...(d=r.parameters)==null?void 0:d.docs,source:{originalSource:"{}",...(m=(c=r.parameters)==null?void 0:c.docs)==null?void 0:m.source}}};var l,u,p;a.parameters={...a.parameters,docs:{...(l=a.parameters)==null?void 0:l.docs,source:{originalSource:`{
+  args: {
+    isLoading: true
+  }
+}`,...(p=(u=a.parameters)==null?void 0:u.docs)==null?void 0:p.source}}};var g,f,v;o.parameters={...o.parameters,docs:{...(g=o.parameters)==null?void 0:g.docs,source:{originalSource:`{
+  args: {
+    isDisabled: true
+  }
+}`,...(v=(f=o.parameters)==null?void 0:f.docs)==null?void 0:v.source}}};var y,b,h;t.parameters={...t.parameters,docs:{...(y=t.parameters)==null?void 0:y.docs,source:{originalSource:`{
+  args: {
+    children: <><Star size={16} /> Click me</>
+  }
+}`,...(h=(b=t.parameters)==null?void 0:b.docs)==null?void 0:h.source}}};var x,C,k;s.parameters={...s.parameters,docs:{...(x=s.parameters)==null?void 0:x.docs,source:{originalSource:`{
+  args: {
+    sx: {
+      backgroundColor: 'var(--color-background-state-interaction-hover-primary)'
+    }
+  }
+}`,...(k=(C=s.parameters)==null?void 0:C.docs)==null?void 0:k.source}}};const Q=["Default","Loading","Disabled","WithIcon","Hover"];export{r as Default,o as Disabled,s as Hover,a as Loading,t as WithIcon,Q as __namedExportsOrder,K as default};

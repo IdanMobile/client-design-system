@@ -1,0 +1,29 @@
+import{j as i}from"./jsx-runtime-D_zvdyIk.js";import{R as E}from"./index-DCXu2c-y.js";import{B as F}from"./Button-DoEnHtwV.js";import{C as M}from"./CircularProgress-DXkKEIgb.js";import{S as P}from"./star-DL9v8gqC.js";import"./DefaultPropsProvider-Dvarb5rE.js";import"./createSimplePaletteValueFilter-bm0fmN_7.js";import"./ButtonBase-qaOHKnqS.js";import"./useTimeout-BCS2DETX.js";import"./useForkRef-BdVMMcKE.js";import"./useEventCallback-O7DVlRIu.js";import"./isFocusVisible-B8k4qzLc.js";const l=E.forwardRef(({onClick:D,onHover:j,isDisabled:I=!1,isLoading:d=!1,children:L,sx:O,className:V,type:N="text",size:e="md",width:z="compact",state:A="default"},H)=>{const u=N==="icon"?"var(--dimension-8---0-5-rem)":e==="lg"?"var(--dimension-24---1-5-rem)":e==="md"?"var(--dimension-20---1-25-rem)":"var(--dimension-16---1-rem)",W=u,_=e==="xs"?"var(--border-radius-md)":"var(--border-radius-lg)";return i.jsx(F,{ref:H,onClick:D,onMouseEnter:j,disabled:I||d,className:V,sx:{display:"flex",alignItems:"center",justifyContent:"center",paddingLeft:u,paddingRight:W,borderRadius:_,borderWidth:"var(--border-width-thin)",borderStyle:"solid",borderColor:"currentColor",fontSize:e==="xs"?"var(--font-text-xs-medium-size)":"var(--font-text-md-l-24-medium-size)",fontFamily:"var(--font-text-md-l-24-medium-family)",fontWeight:"var(--font-text-md-l-24-medium-weight)",letterSpacing:e==="xs"?"var(--gap-body-xs-letter-spacing)":"var(--gap-body-md-letter-spacing)",lineHeight:e==="xs"?"var(--body-xs-line-height)":"var(--body-md-line-height-24)",width:z==="fluid"?"100%":"auto","&:hover":{backgroundColor:"var(--color-background-state-interaction-hover-neutral)"},"&:focus":{outline:"2px solid var(--color-background-primary-bold-100)"},"&:disabled":{color:"var(--color-text-neutral-subtle-300)",borderColor:"var(--color-border-neutral-subtle-200)"},...O},children:d?i.jsx(M,{size:24}):L})});l.displayName="ButtonOutline";l.__docgenInfo={description:"ButtonOutline component for rendering an outlined button with various states and sizes.",methods:[],displayName:"ButtonOutline",props:{onClick:{required:!1,tsType:{name:"signature",type:"function",raw:"() => void",signature:{arguments:[],return:{name:"void"}}},description:"Click handler"},onHover:{required:!1,tsType:{name:"signature",type:"function",raw:"() => void",signature:{arguments:[],return:{name:"void"}}},description:"Mouse enter handler"},isDisabled:{required:!1,tsType:{name:"boolean"},description:"Disabled state",defaultValue:{value:"false",computed:!1}},isLoading:{required:!1,tsType:{name:"boolean"},description:"Loading state",defaultValue:{value:"false",computed:!1}},children:{required:!1,tsType:{name:"ReactReactNode",raw:"React.ReactNode"},description:"Content slot"},sx:{required:!1,tsType:{name:"SxProps"},description:"Style overrides"},className:{required:!1,tsType:{name:"string"},description:"Class overrides"},type:{required:!1,tsType:{name:"union",raw:"'text' | 'icon'",elements:[{name:"literal",value:"'text'"},{name:"literal",value:"'icon'"}]},description:"Button type",defaultValue:{value:"'text'",computed:!1}},size:{required:!1,tsType:{name:"union",raw:"'lg' | 'md' | 'sm' | 'xs'",elements:[{name:"literal",value:"'lg'"},{name:"literal",value:"'md'"},{name:"literal",value:"'sm'"},{name:"literal",value:"'xs'"}]},description:"Button size",defaultValue:{value:"'md'",computed:!1}},width:{required:!1,tsType:{name:"union",raw:"'compact' | 'fluid'",elements:[{name:"literal",value:"'compact'"},{name:"literal",value:"'fluid'"}]},description:"Button width",defaultValue:{value:"'compact'",computed:!1}},state:{required:!1,tsType:{name:"union",raw:"'default' | 'hover' | 'focus' | 'disabled'",elements:[{name:"literal",value:"'default'"},{name:"literal",value:"'hover'"},{name:"literal",value:"'focus'"},{name:"literal",value:"'disabled'"}]},description:"Button state",defaultValue:{value:"'default'",computed:!1}}}};const oe={title:"Components/Button/Outline",component:l,args:{children:"Click me"}},r={},a={args:{isLoading:!0}},t={args:{isDisabled:!0}},o={args:{children:i.jsx(P,{size:16})}},s={args:{sx:{"&:hover":{backgroundColor:"var(--color-background-state-interaction-hover-neutral)"}}}},n={args:{sx:{"&:focus":{outline:"2px solid var(--color-background-primary-bold-100)"}}}};var c,m,p;r.parameters={...r.parameters,docs:{...(c=r.parameters)==null?void 0:c.docs,source:{originalSource:"{}",...(p=(m=r.parameters)==null?void 0:m.docs)==null?void 0:p.source}}};var f,g,v;a.parameters={...a.parameters,docs:{...(f=a.parameters)==null?void 0:f.docs,source:{originalSource:`{
+  args: {
+    isLoading: true
+  }
+}`,...(v=(g=a.parameters)==null?void 0:g.docs)==null?void 0:v.source}}};var b,x,h;t.parameters={...t.parameters,docs:{...(b=t.parameters)==null?void 0:b.docs,source:{originalSource:`{
+  args: {
+    isDisabled: true
+  }
+}`,...(h=(x=t.parameters)==null?void 0:x.docs)==null?void 0:h.source}}};var y,C,w;o.parameters={...o.parameters,docs:{...(y=o.parameters)==null?void 0:y.docs,source:{originalSource:`{
+  args: {
+    children: <Star size={16} />
+  }
+}`,...(w=(C=o.parameters)==null?void 0:C.docs)==null?void 0:w.source}}};var S,B,k;s.parameters={...s.parameters,docs:{...(S=s.parameters)==null?void 0:S.docs,source:{originalSource:`{
+  args: {
+    sx: {
+      '&:hover': {
+        backgroundColor: 'var(--color-background-state-interaction-hover-neutral)'
+      }
+    }
+  }
+}`,...(k=(B=s.parameters)==null?void 0:B.docs)==null?void 0:k.source}}};var q,T,R;n.parameters={...n.parameters,docs:{...(q=n.parameters)==null?void 0:q.docs,source:{originalSource:`{
+  args: {
+    sx: {
+      '&:focus': {
+        outline: '2px solid var(--color-background-primary-bold-100)'
+      }
+    }
+  }
+}`,...(R=(T=n.parameters)==null?void 0:T.docs)==null?void 0:R.source}}};const se=["Default","Loading","Disabled","WithIcon","Hover","Focus"];export{r as Default,t as Disabled,n as Focus,s as Hover,a as Loading,o as WithIcon,se as __namedExportsOrder,oe as default};
