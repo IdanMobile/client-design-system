@@ -3,6 +3,12 @@ import tokens from '../../design-tokens/tokens.json';
 
 export const Blurs = () => {
   const blurs = (tokens as any).blurs || [];
+  const colors = (tokens as any).colors as Array<{ value: string }> | undefined;
+  const c0 = colors?.[0]?.value;
+  const c1 = colors?.[1]?.value ?? c0;
+  const previewBackground = c0
+    ? `linear-gradient(45deg, ${c0}, ${c1})`
+    : 'linear-gradient(45deg, #d1d5db, #9ca3af)';
 
   return (
     <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
@@ -17,7 +23,7 @@ export const Blurs = () => {
                 <div style={{
                   position: 'absolute',
                   inset: 0,
-                  background: 'linear-gradient(45deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%)'
+                  background: previewBackground,
                 }} />
                 <div style={{
                   position: 'absolute',
