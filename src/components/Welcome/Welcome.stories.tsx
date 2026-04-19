@@ -5,7 +5,7 @@ const meta = {
   title: 'System/Welcome',
   component: Welcome,
   parameters: {
-    layout: 'padded',
+    layout: 'centered',
   },
 };
 
