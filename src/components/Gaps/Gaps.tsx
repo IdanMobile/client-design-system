@@ -3,6 +3,10 @@ import tokens from '../../design-tokens/tokens.json';
 
 export const Gaps = () => {
   const gaps = (tokens as any).gaps || [];
+  const swatchColor = (tokens as any).colors?.[0]?.value;
+  const swatchStyle: React.CSSProperties = swatchColor
+    ? { background: swatchColor }
+    : { background: 'transparent', border: '1px dashed #ccc' };
 
   const toKebab = (s: string) => s.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/ /g, '-').replace(/_/g, '-').toLowerCase();
 
@@ -16,7 +20,7 @@ export const Gaps = () => {
           {gaps.map((g: any) => (
             <div key={g.name} style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', padding: '0.5rem 0', borderBottom: '1px solid #f9f9f9' }}>
               <div style={{ width: '140px', fontWeight: 'bold', fontSize: '0.9rem' }}>{g.name}</div>
-              <div style={{ width: `${g.value}px`, height: '20px', background: '#667eea', borderRadius: '2px' }} />
+              <div style={{ width: `${g.value}px`, height: '20px', borderRadius: '2px', ...swatchStyle }} />
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem', minWidth: '100px' }}>
                 <div style={{ color: '#555', fontFamily: 'monospace', fontSize: '0.8rem' }}>size: {g.value}px</div>
                 <div style={{ color: '#aaa', fontFamily: 'monospace', fontSize: '0.7rem' }}>var: --gap-{toKebab(g.name)}</div>
