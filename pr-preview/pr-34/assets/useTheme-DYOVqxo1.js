@@ -1,1 +1,0 @@
-import"./index-DCXu2c-y.js";import{T as m,d as t}from"./DefaultPropsProvider-4fy5dMm0.js";import{u as o}from"./DesignSystemProvider-taZLeaZD.js";function a(){const e=o(t);return e[m]||e}export{a as u};
