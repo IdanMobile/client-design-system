@@ -1,6 +1,6 @@
 {
-  "version": "0.0.4",
-  "generatedAt": "2026-04-18T17:01:11.530Z",
+  "version": "0.0.5",
+  "generatedAt": "2026-04-20T08:23:53.853Z",
   "components": [
     {
       "name": "Blurs",
@@ -130,6 +130,12 @@
       "props": {}
     },
     {
+      "name": "TokensCss",
+      "path": "src/components/Tokens/TokensCss.tsx",
+      "description": "TokensCss component",
+      "props": {}
+    },
+    {
       "name": "Typography",
       "path": "src/components/Typography/Typography.tsx",
       "description": "Typography component",
@@ -140,21 +146,115 @@
       "path": "src/components/Welcome/Welcome.tsx",
       "description": "Welcome component",
       "props": {}
+    },
+    {
+      "name": "Button (Outline)",
+      "path": "src/components/ButtonOutline/ButtonOutline.tsx",
+      "description": "Button (Outline) component",
+      "props": {
+        "onClick": {
+          "type": "() => void",
+          "required": false,
+          "description": "Click handler"
+        },
+        "onHover": {
+          "type": "() => void",
+          "required": false,
+          "description": "Hover handler"
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "Disabled state"
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false,
+          "description": "Loading state"
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "Button content"
+        },
+        "sx": {
+          "type": "Record<string, unknown>",
+          "required": false,
+          "description": "Style overrides"
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Class overrides"
+        }
+      }
+    },
+    {
+      "name": "Button (Primary)",
+      "path": "src/components/ButtonPrimary/ButtonPrimary.tsx",
+      "description": "Button (Primary) component",
+      "props": {
+        "onClick": {
+          "type": "() => void",
+          "required": false
+        },
+        "onHover": {
+          "type": "() => void",
+          "required": false
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": false
+        },
+        "sx": {
+          "type": "Record<string, unknown>",
+          "required": false
+        },
+        "className": {
+          "type": "string",
+          "required": false
+        },
+        "type": {
+          "type": "'text' | 'icon'",
+          "required": false
+        },
+        "size": {
+          "type": "'lg' | 'md' | 'sm' | 'xs'",
+          "required": false
+        },
+        "width": {
+          "type": "'compact' | 'fluid'",
+          "required": false
+        }
+      }
     }
   ],
   "tokens": {
-    "colors": 0,
-    "typography": 0,
-    "radius": 4,
+    "colors": 295,
+    "typography": 52,
+    "radius": 13,
     "shadows": 0,
     "elevations": 0,
-    "borders": 0,
-    "gaps": 10,
-    "sizes": 6,
-    "opacity": 9,
-    "gradients": 0,
+    "borders": 2,
+    "gaps": 20,
+    "sizes": 67,
+    "opacity": 0,
+    "gradients": 1,
     "blurs": 0,
     "layoutGrids": 0,
     "icons": 0
+  },
+  "library": {
+    "id": "mui",
+    "label": "Material UI",
+    "importPackage": "@mui/material"
   }
 }
