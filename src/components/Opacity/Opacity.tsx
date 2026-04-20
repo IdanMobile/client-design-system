@@ -3,6 +3,10 @@ import tokens from '../../design-tokens/tokens.json';
 
 export const Opacity = () => {
   const opacity = (tokens as any).opacity || [];
+  const swatchColor = (tokens as any).colors?.[0]?.value;
+  const swatchStyle: React.CSSProperties = swatchColor
+    ? { background: swatchColor }
+    : { background: 'transparent', border: '1px dashed #ccc' };
 
   return (
     <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
@@ -16,9 +20,9 @@ export const Opacity = () => {
               <div style={{
                 width: '100%',
                 height: '80px',
-                background: '#667eea',
                 opacity: o.opacity,
-                borderRadius: '8px'
+                borderRadius: '8px',
+                ...swatchStyle,
               }} />
               <div style={{ fontWeight: 'bold', fontSize: '0.9rem' }}>{o.name}</div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>

@@ -22,12 +22,26 @@ const toKebab = (s: string) =>
    .toLowerCase()
    .replace(/[^a-z0-9-]/g, '');
 
+const contrastText = (hex: string): string => {
+  const h = hex.replace('#', '');
+  if (h.length < 6) return '#111827';
+  const r = parseInt(h.slice(0, 2), 16);
+  const g = parseInt(h.slice(2, 4), 16);
+  const b = parseInt(h.slice(4, 6), 16);
+  const luma = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+  return luma > 0.6 ? '#111827' : '#ffffff';
+};
+
 export const Themes = () => {
   const themes: Record<string, ThemeTokens> = (tokens as any).themes || {};
   const themeNames = Object.keys(themes);
   const [selected, setSelected] = useState<string | null>(themeNames[0] ?? null);
 
   const active = selected ? themes[selected] : undefined;
+  const activeSurface = active?.colors?.find((c) => /surface|background|bg/i.test(c.name))?.value
+    ?? '#ffffff';
+  const activeTextColor = active?.colors?.find((c) => /text|foreground|on-/i.test(c.name))?.value
+    ?? '#111827';
 
   return (
     <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
@@ -45,25 +59,29 @@ export const Themes = () => {
       {themeNames.length > 0 && (
         <>
           <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
-            {themeNames.map((n) => (
-              <button
-                key={n}
-                onClick={() => setSelected(n)}
-                style={{
-                  padding: '0.5rem 1rem',
-                  borderRadius: '999px',
-                  border: '1px solid',
-                  borderColor: selected === n ? '#3074F3' : '#e5e7eb',
-                  background: selected === n ? '#3074F3' : '#ffffff',
-                  color: selected === n ? '#ffffff' : '#111827',
-                  fontSize: '0.85rem',
-                  cursor: 'pointer',
-                  fontWeight: selected === n ? 600 : 500,
-                }}
-              >
-                {n}
-              </button>
-            ))}
+            {themeNames.map((n) => {
+              const isSelected = selected === n;
+              const themeAccent = themes[n]?.colors?.[0]?.value;
+              return (
+                <button
+                  key={n}
+                  onClick={() => setSelected(n)}
+                  style={{
+                    padding: '0.5rem 1rem',
+                    borderRadius: '999px',
+                    border: '1px solid',
+                    borderColor: isSelected ? (themeAccent ?? '#111827') : '#e5e7eb',
+                    background: isSelected ? (themeAccent ?? '#111827') : '#ffffff',
+                    color: isSelected ? (themeAccent ? contrastText(themeAccent) : '#ffffff') : '#111827',
+                    fontSize: '0.85rem',
+                    cursor: 'pointer',
+                    fontWeight: isSelected ? 600 : 500,
+                  }}
+                >
+                  {n}
+                </button>
+              );
+            })}
           </div>
 
           {active && (
@@ -73,8 +91,8 @@ export const Themes = () => {
                 border: '1px solid #e5e7eb',
                 borderRadius: '16px',
                 padding: '2rem',
-                background: 'var(--color-surface)',
-                color: 'var(--color-text-main)',
+                background: activeSurface,
+                color: activeTextColor,
                 transition: 'all 0.2s ease',
               }}
             >

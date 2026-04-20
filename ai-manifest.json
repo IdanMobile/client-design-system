@@ -1,6 +1,6 @@
 {
-  "version": "0.0.4",
-  "generatedAt": "2026-04-18T17:01:11.530Z",
+  "version": "0.0.5",
+  "generatedAt": "2026-04-20T11:25:05.673Z",
   "components": [
     {
       "name": "Blurs",
@@ -130,6 +130,12 @@
       "props": {}
     },
     {
+      "name": "TokensCss",
+      "path": "src/components/Tokens/TokensCss.tsx",
+      "description": "TokensCss component",
+      "props": {}
+    },
+    {
       "name": "Typography",
       "path": "src/components/Typography/Typography.tsx",
       "description": "Typography component",
@@ -140,21 +146,217 @@
       "path": "src/components/Welcome/Welcome.tsx",
       "description": "Welcome component",
       "props": {}
+    },
+    {
+      "name": "Button (Primary)",
+      "path": "src/components/ButtonPrimary/ButtonPrimary.tsx",
+      "description": "Button (Primary) component",
+      "props": {
+        "onClick": {
+          "type": "(event: React.SyntheticEvent) => void",
+          "required": false,
+          "description": "Fired when the user clicks / activates the primitive."
+        },
+        "onHover": {
+          "type": "(event: React.SyntheticEvent) => void",
+          "required": false,
+          "description": "Fired when the mouse enters."
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "Disable the primitive."
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false,
+          "description": "Show a loading spinner. Also implies disabled."
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "Content rendered inside the primitive."
+        },
+        "icon": {
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "Optional leading icon (React node)."
+        },
+        "sx": {
+          "type": "Record<string, unknown>",
+          "required": false,
+          "description": "Extra sx overrides merged on top of the manifest-driven styles."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Extra className to append."
+        },
+        "type": {
+          "type": "'textButton' | 'iconButton'",
+          "required": false,
+          "description": "Figma variant axis: \"Type\" (values: \"Text button\" → textButton, \"Icon button\" → iconButton)"
+        },
+        "size": {
+          "type": "'lg' | 'md' | 'sm' | 'xs'",
+          "required": false,
+          "description": "Figma variant axis: \"Size\" (values: \"lg\" → lg, \"md\" → md, \"sm\" → sm, \"xs\" → xs)"
+        },
+        "width": {
+          "type": "'compact' | 'fluidBlock'",
+          "required": false,
+          "description": "Figma variant axis: \"Width\" (values: \"Compact\" → compact, \"Fluid/block\" → fluidBlock)"
+        },
+        "state": {
+          "type": "'default' | 'hover' | 'focus' | 'disabled'",
+          "required": false,
+          "description": "Figma variant axis: \"State\" (values: \"Default\" → default, \"Hover\" → hover, \"Focus\" → focus, \"Disabled\" → disabled)"
+        }
+      }
+    },
+    {
+      "name": "Button (Outline)",
+      "path": "src/components/ButtonOutline/ButtonOutline.tsx",
+      "description": "Button (Outline) component",
+      "props": {
+        "onClick": {
+          "type": "(event: React.SyntheticEvent) => void",
+          "required": false,
+          "description": "Fired when the user clicks / activates the primitive."
+        },
+        "onHover": {
+          "type": "(event: React.SyntheticEvent) => void",
+          "required": false,
+          "description": "Fired when the mouse enters."
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "Disable the primitive."
+        },
+        "isLoading": {
+          "type": "boolean",
+          "required": false,
+          "description": "Show a loading spinner. Also implies disabled."
+        },
+        "children": {
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "Content rendered inside the primitive."
+        },
+        "icon": {
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "Optional leading icon (React node)."
+        },
+        "sx": {
+          "type": "Record<string, unknown>",
+          "required": false,
+          "description": "Extra sx overrides merged on top of the manifest-driven styles."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Extra className to append."
+        },
+        "type": {
+          "type": "'textButton' | 'iconButton'",
+          "required": false,
+          "description": "Figma variant axis: \"Type\" (values: \"Text button\" → textButton, \"Icon button\" → iconButton)"
+        },
+        "size": {
+          "type": "'lg' | 'md' | 'sm' | 'xs'",
+          "required": false,
+          "description": "Figma variant axis: \"Size\" (values: \"lg\" → lg, \"md\" → md, \"sm\" → sm, \"xs\" → xs)"
+        },
+        "width": {
+          "type": "'compact' | 'fluidBlock'",
+          "required": false,
+          "description": "Figma variant axis: \"Width\" (values: \"Compact\" → compact, \"Fluid/block\" → fluidBlock)"
+        },
+        "state": {
+          "type": "'default' | 'hover' | 'focus' | 'disabled'",
+          "required": false,
+          "description": "Figma variant axis: \"State\" (values: \"Default\" → default, \"Hover\" → hover, \"Focus\" → focus, \"Disabled\" → disabled)"
+        }
+      }
+    },
+    {
+      "name": "Chip / Tag",
+      "path": "src/components/ChipTag/ChipTag.tsx",
+      "description": "Chip / Tag component",
+      "props": {
+        "onClick": {
+          "type": "(event: React.SyntheticEvent) => void",
+          "required": false,
+          "description": "Fired when the user clicks / activates the primitive."
+        },
+        "onHover": {
+          "type": "(event: React.SyntheticEvent) => void",
+          "required": false,
+          "description": "Fired when the mouse enters."
+        },
+        "isDisabled": {
+          "type": "boolean",
+          "required": false,
+          "description": "Disable the primitive."
+        },
+        "icon": {
+          "type": "React.ReactNode",
+          "required": false,
+          "description": "Optional leading icon (React node)."
+        },
+        "sx": {
+          "type": "Record<string, unknown>",
+          "required": false,
+          "description": "Extra sx overrides merged on top of the manifest-driven styles."
+        },
+        "className": {
+          "type": "string",
+          "required": false,
+          "description": "Extra className to append."
+        },
+        "type": {
+          "type": "'gray' | 'grayOutline' | 'primary' | 'primaryOutline'",
+          "required": false,
+          "description": "Figma variant axis: \"Type\" (values: \"Gray\" → gray, \"Gray - outline\" → grayOutline, \"Primary\" → primary, \"Primary - outline\" → primaryOutline)"
+        },
+        "size": {
+          "type": "'xs' | 'sm' | 'md'",
+          "required": false,
+          "description": "Figma variant axis: \"Size\" (values: \"xs\" → xs, \"sm\" → sm, \"md\" → md)"
+        },
+        "state": {
+          "type": "'default' | 'hover' | 'disabled'",
+          "required": false,
+          "description": "Figma variant axis: \"State\" (values: \"Default\" → default, \"Hover\" → hover, \"Disabled\" → disabled)"
+        },
+        "isSelected": {
+          "type": "'no' | 'truestyle1' | 'truestyle2'",
+          "required": false,
+          "description": "Figma variant axis: \"isSelected\" (values: \"False\" → no, \"True (style 1)\" → truestyle1, \"True (style 2)\" → truestyle2)"
+        }
+      }
     }
   ],
   "tokens": {
-    "colors": 0,
-    "typography": 0,
-    "radius": 4,
+    "colors": 295,
+    "typography": 52,
+    "radius": 13,
     "shadows": 0,
     "elevations": 0,
-    "borders": 0,
-    "gaps": 10,
-    "sizes": 6,
-    "opacity": 9,
-    "gradients": 0,
+    "borders": 2,
+    "gaps": 20,
+    "sizes": 67,
+    "opacity": 0,
+    "gradients": 1,
     "blurs": 0,
     "layoutGrids": 0,
     "icons": 0
+  },
+  "library": {
+    "id": "mui",
+    "label": "Material UI",
+    "importPackage": "@mui/material"
   }
 }
