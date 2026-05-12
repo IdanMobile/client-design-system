@@ -1,0 +1,11 @@
+{
+  "tenantId": "test",
+  "repository": "IdanMobile/client-design-system",
+  "installationId": "123609951",
+  "approvedComponents": [
+    "ai-create-an-analytics"
+  ],
+  "tokenChanges": 6,
+  "createdAt": "2026-05-12T22:31:41.890Z",
+  "source": "figma-plugin"
+}
