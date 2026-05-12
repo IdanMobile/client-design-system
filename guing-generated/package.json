@@ -1,0 +1,24 @@
+{
+  "name": "@client/design-system-generated",
+  "version": "0.0.0-publish-request",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "files": [
+    "src",
+    "stories"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@storybook/react-vite": "^10.0.0",
+    "@types/react": "^19.0.0",
+    "typescript": "^5.0.0"
+  }
+}
