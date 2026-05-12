@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "0.1.0",
+  "generatedAt": "2026-05-12T22:56:37.762Z",
+  "source": {
+    "type": "guing-plugin-publish-execution",
+    "tenantId": "test",
+    "repository": "IdanMobile/client-design-system",
+    "installationId": "123609951"
+  },
+  "groupPath": [
+    "GUING",
+    "Custom Components"
+  ],
+  "components": [
+    {
+      "name": "ai-create-an-analytics",
+      "source": "plugin-library",
+      "status": "approved",
+      "props": [
+        {
+          "name": "title",
+          "type": "string",
+          "defaultValue": "ai-create-an-analytics"
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "defaultValue": "Generated and synced by GUING"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "defaultValue": false
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "defaultValue": "42"
+        },
+        {
+          "name": "trend",
+          "type": "string",
+          "defaultValue": "+12%"
+        }
+      ],
+      "variantAxes": {
+        "size": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "variant": [
+          "default",
+          "outline",
+          "ghost"
+        ]
+      },
+      "states": [
+        "default",
+        "hover",
+        "active"
+      ],
+      "inferredItems": [
+        "variants",
+        "props",
+        "slots",
+        "events"
+      ],
+      "lossyItems": [],
+      "unsupportedItems": []
+    }
+  ],
+  "tokenMappings": {
+    "summary": {
+      "requestedTokenChanges": 6
+    }
+  },
+  "coverage": {
+    "approvedComponents": 1,
+    "tokenChanges": 6
+  }
+}
