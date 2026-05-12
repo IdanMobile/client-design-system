@@ -1,0 +1,12 @@
+{
+  "generatedAt": "2026-05-12T21:44:41.865Z",
+  "repository": "IdanMobile/client-design-system",
+  "components": [
+    {
+      "id": "guing-1",
+      "name": "ai-create-an-analytics",
+      "status": "approved",
+      "source": "figma-plugin-library"
+    }
+  ]
+}
