@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-05-13T13:45:51.932Z",
+  "repository": "IdanMobile/client-design-system",
+  "components": [
+    {
+      "id": "guing-1",
+      "name": "Button",
+      "status": "approved",
+      "source": "figma-plugin-library",
+      "variantAxes": {
+        "size": [
+          "md"
+        ],
+        "variant": [
+          "primary"
+        ]
+      },
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "id": "guing-2",
+      "name": "Card",
+      "status": "approved",
+      "source": "figma-plugin-library",
+      "variantAxes": {
+        "size": [
+          "md"
+        ],
+        "variant": [
+          "default"
+        ]
+      },
+      "states": [
+        "default"
+      ]
+    }
+  ]
+}
