@@ -1,0 +1,13 @@
+{
+  "tenantId": "acme-design",
+  "repository": "IdanMobile/client-design-system",
+  "installationId": "123609951",
+  "approvedComponents": [
+    "Button",
+    "Card"
+  ],
+  "tokenChanges": 14,
+  "applyMode": "scaffold",
+  "createdAt": "2026-05-13T12:49:23.602Z",
+  "source": "figma-plugin"
+}

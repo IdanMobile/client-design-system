@@ -1,0 +1,29 @@
+name: GUING Publish Validation
+
+on:
+  pull_request:
+    paths:
+      - 'guing-generated/**'
+      - '.guing/publish-requests/**'
+
+jobs:
+  validate-generated-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Typecheck generated outputs
+        run: pnpm exec tsc -p guing-generated/tsconfig.json --noEmit
+      - name: Validate generated package metadata
+        run: node -e "const p=require('./guing-generated/package.json'); if(!p.name) throw new Error('Missing package name'); if(!p.exports || !p.exports['.']) throw new Error('Missing package exports')"
+      - name: Validate latest publish request pointer
+        run: node -e "const fs=require('node:fs'); const p='.guing/publish-requests/LATEST.json'; if(!fs.existsSync(p)) throw new Error('Missing LATEST publish pointer'); const data=JSON.parse(fs.readFileSync(p,'utf8')); if(!data.latestRequestPath) throw new Error('LATEST missing request path');"
+      - name: Build storybook generated previews
+        run: pnpm exec storybook build --config-dir guing-generated/.storybook --output-dir .guing/storybook-static
