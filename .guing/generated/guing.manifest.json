@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "0.1.0",
+  "generatedAt": "2026-05-13T13:48:15.128Z",
+  "source": {
+    "type": "guing-plugin-publish-execution",
+    "tenantId": "acme-design",
+    "repository": "IdanMobile/client-design-system",
+    "installationId": "123609951"
+  },
+  "groupPath": [
+    "GUING",
+    "Custom Components"
+  ],
+  "components": [
+    {
+      "name": "Button",
+      "source": "plugin-library",
+      "status": "approved",
+      "props": [
+        {
+          "name": "title",
+          "type": "string",
+          "defaultValue": "Button"
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "defaultValue": "Generated and synced by GUING"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "defaultValue": false
+        }
+      ],
+      "variantAxes": {
+        "size": [
+          "md"
+        ],
+        "variant": [
+          "primary"
+        ]
+      },
+      "states": [
+        "default"
+      ],
+      "inferredItems": [
+        "variants",
+        "props",
+        "slots",
+        "events"
+      ],
+      "lossyItems": [],
+      "unsupportedItems": []
+    },
+    {
+      "name": "Card",
+      "source": "plugin-library",
+      "status": "approved",
+      "props": [
+        {
+          "name": "title",
+          "type": "string",
+          "defaultValue": "Card"
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "defaultValue": "Generated and synced by GUING"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "defaultValue": false
+        }
+      ],
+      "variantAxes": {
+        "size": [
+          "md"
+        ],
+        "variant": [
+          "default"
+        ]
+      },
+      "states": [
+        "default"
+      ],
+      "inferredItems": [
+        "variants",
+        "props",
+        "slots",
+        "events"
+      ],
+      "lossyItems": [],
+      "unsupportedItems": []
+    }
+  ],
+  "tokenMappings": {
+    "summary": {
+      "requestedTokenChanges": 14
+    }
+  },
+  "coverage": {
+    "approvedComponents": 2,
+    "tokenChanges": 14
+  }
+}
