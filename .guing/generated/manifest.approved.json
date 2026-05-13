@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-05-13T13:22:54.132Z",
+  "repository": "IdanMobile/client-design-system",
+  "tenantId": "acme-design",
+  "components": [
+    {
+      "name": "Button",
+      "props": [
+        {
+          "name": "title",
+          "type": "string",
+          "defaultValue": "Button"
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "defaultValue": "Generated and synced by GUING"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "defaultValue": false
+        }
+      ],
+      "variantAxes": {
+        "size": [
+          "md"
+        ],
+        "variant": [
+          "primary"
+        ]
+      },
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "Card",
+      "props": [
+        {
+          "name": "title",
+          "type": "string",
+          "defaultValue": "Card"
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "defaultValue": "Generated and synced by GUING"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "defaultValue": false
+        }
+      ],
+      "variantAxes": {
+        "size": [
+          "md"
+        ],
+        "variant": [
+          "default"
+        ]
+      },
+      "states": [
+        "default"
+      ]
+    }
+  ]
+}
