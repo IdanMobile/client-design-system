@@ -1,0 +1,35 @@
+{
+  "name": "@client/design-system-generated",
+  "version": "0.1.0-guing-pr",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "main": "./guing-generated/src/index.ts",
+  "module": "./guing-generated/src/index.ts",
+  "types": "./guing-generated/src/index.ts",
+  "exports": {
+    ".": "./guing-generated/src/index.ts",
+    "./tokens.css": "./guing-generated/src/tokens.css"
+  },
+  "files": [
+    "guing-generated/src",
+    "guing-generated/stories"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "pnpm run typecheck",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "verify:guing": "pnpm run typecheck && pnpm run build-storybook"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@storybook/react-vite": "^10.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.0.0"
+  }
+}
