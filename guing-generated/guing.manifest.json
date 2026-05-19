@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "0.1.0",
+  "generatedAt": "2026-05-12T22:21:34.583Z",
+  "source": {
+    "type": "guing-plugin-publish-execution",
+    "tenantId": "test",
+    "repository": "IdanMobile/client-design-system",
+    "installationId": "123609951"
+  },
+  "groupPath": [
+    "GUING",
+    "Custom Components"
+  ],
+  "components": [
+    {
+      "name": "ai-create-an-analytics",
+      "source": "plugin-library",
+      "status": "approved",
+      "inferredItems": [
+        "variants",
+        "props",
+        "slots",
+        "events"
+      ],
+      "lossyItems": [],
+      "unsupportedItems": []
+    }
+  ],
+  "tokenMappings": {
+    "summary": {
+      "requestedTokenChanges": 6
+    }
+  },
+  "coverage": {
+    "approvedComponents": 1,
+    "tokenChanges": 6
+  }
+}
