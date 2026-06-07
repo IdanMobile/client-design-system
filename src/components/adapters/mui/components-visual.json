@@ -1,0 +1,2020 @@
+{
+  "categories": [
+    {
+      "name": "Inputs",
+      "components": [
+        {
+          "name": "MuiButton",
+          "displayName": "Button",
+          "variants": [
+            {
+              "label": "Primary",
+              "width": 120,
+              "height": 40,
+              "text": "Button",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#1976D2",
+              "textTokenName": null,
+              "textFallbackHex": "#FFFFFF",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 6,
+              "fontSize": 14,
+              "fontWeight": 600,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Secondary",
+              "width": 120,
+              "height": 40,
+              "text": "Button",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#1976D2",
+              "borderTokenName": null,
+              "borderFallbackHex": "#1976D2",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 6,
+              "fontSize": 14,
+              "fontWeight": 600,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Text",
+              "width": 120,
+              "height": 40,
+              "text": "Button",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#1976D2",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 6,
+              "fontSize": 14,
+              "fontWeight": 600,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Disabled",
+              "width": 120,
+              "height": 40,
+              "text": "Button",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#E0E0E0",
+              "textTokenName": null,
+              "textFallbackHex": "#9E9E9E",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 6,
+              "fontSize": 14,
+              "fontWeight": 600,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiButtonGroup",
+          "displayName": "ButtonGroup",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 240,
+              "height": 40,
+              "text": "One | Two | Three",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#1976D2",
+              "borderTokenName": null,
+              "borderFallbackHex": "#1976D2",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 6,
+              "fontSize": 14,
+              "fontWeight": 500,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiCheckbox",
+          "displayName": "Checkbox",
+          "variants": [
+            {
+              "label": "Unchecked",
+              "width": 80,
+              "height": 32,
+              "text": "Label",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#757575",
+              "borderWidth": 2,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Checked",
+              "width": 80,
+              "height": 32,
+              "text": "Label",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#1976D2",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Indeterminate",
+              "width": 80,
+              "height": 32,
+              "text": "Label",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#1976D2",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Disabled",
+              "width": 80,
+              "height": 32,
+              "text": "Label",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#BDBDBD",
+              "borderTokenName": null,
+              "borderFallbackHex": "#BDBDBD",
+              "borderWidth": 2,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiFab",
+          "displayName": "Fab",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 56,
+              "height": 56,
+              "text": "+",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#1976D2",
+              "textTokenName": null,
+              "textFallbackHex": "#FFFFFF",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 28,
+              "fontSize": 24,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiIconButton",
+          "displayName": "IconButton",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 40,
+              "height": 40,
+              "text": "☆",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#1976D2",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 20,
+              "fontSize": 20,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiRadio",
+          "displayName": "Radio",
+          "variants": [
+            {
+              "label": "Unselected",
+              "width": 80,
+              "height": 32,
+              "text": "Option",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#757575",
+              "borderWidth": 2,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 16,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Selected",
+              "width": 80,
+              "height": 32,
+              "text": "Option",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#1976D2",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 16,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Disabled",
+              "width": 80,
+              "height": 32,
+              "text": "Option",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#BDBDBD",
+              "textTokenName": null,
+              "textFallbackHex": "#BDBDBD",
+              "borderTokenName": null,
+              "borderFallbackHex": "#BDBDBD",
+              "borderWidth": 2,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 16,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiRadioGroup",
+          "displayName": "RadioGroup",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 120,
+              "height": 80,
+              "text": "Option A\nOption B",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiRating",
+          "displayName": "Rating",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 120,
+              "height": 32,
+              "text": "★★★☆☆",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#F5A623",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 20,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiSelect",
+          "displayName": "Select",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 200,
+              "height": 40,
+              "text": "Select option ▾",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#BDBDBD",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiSlider",
+          "displayName": "Slider",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 200,
+              "height": 24,
+              "text": "──●────",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#E0E0E0",
+              "textTokenName": null,
+              "textFallbackHex": "#1976D2",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 12,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiSwitch",
+          "displayName": "Switch",
+          "variants": [
+            {
+              "label": "Off",
+              "width": 52,
+              "height": 28,
+              "text": "",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#BDBDBD",
+              "textTokenName": null,
+              "textFallbackHex": "#FFFFFF",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 14,
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "On",
+              "width": 52,
+              "height": 28,
+              "text": "",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#1976D2",
+              "textTokenName": null,
+              "textFallbackHex": "#FFFFFF",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 14,
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Disabled",
+              "width": 52,
+              "height": 28,
+              "text": "",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#BDBDBD",
+              "textTokenName": null,
+              "textFallbackHex": "#FFFFFF",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 14,
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiTextField",
+          "displayName": "TextField",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 200,
+              "height": 56,
+              "text": "Label\nPlaceholder...",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#BDBDBD",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Error",
+              "width": 200,
+              "height": 56,
+              "text": "Label\nInvalid value",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#D32F2F",
+              "borderTokenName": null,
+              "borderFallbackHex": "#D32F2F",
+              "borderWidth": 2,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Focused",
+              "width": 200,
+              "height": 56,
+              "text": "Label\nEnter text...",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#1976D2",
+              "borderTokenName": null,
+              "borderFallbackHex": "#1976D2",
+              "borderWidth": 2,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiToggleButton",
+          "displayName": "ToggleButton",
+          "variants": [
+            {
+              "label": "Unselected",
+              "width": 80,
+              "height": 36,
+              "text": "Option",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#BDBDBD",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 500,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Selected",
+              "width": 80,
+              "height": 36,
+              "text": "Option",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#1976D2",
+              "textTokenName": null,
+              "textFallbackHex": "#FFFFFF",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 500,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiToggleButtonGroup",
+          "displayName": "ToggleButtonGroup",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 240,
+              "height": 36,
+              "text": "A | B | C",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#BDBDBD",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 500,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiAutocomplete",
+          "displayName": "Autocomplete",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 300,
+              "height": 56,
+              "text": "Search... ▾",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#BDBDBD",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiFormControlLabel",
+          "displayName": "FormControlLabel",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 120,
+              "height": 32,
+              "text": "☑ Label text",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiFormControl",
+          "displayName": "FormControl",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 200,
+              "height": 56,
+              "text": "Form Field",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#BDBDBD",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiFormLabel",
+          "displayName": "FormLabel",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 120,
+              "height": 24,
+              "text": "Field Label",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#666666",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiMenuItem",
+          "displayName": "MenuItem",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 200,
+              "height": 40,
+              "text": "Menu Item",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Selected",
+              "width": 200,
+              "height": 40,
+              "text": "Menu Item",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#E3F2FD",
+              "textTokenName": null,
+              "textFallbackHex": "#1976D2",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 14,
+              "fontWeight": 500,
+              "fontFamily": "Inter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Typography",
+      "components": [
+        {
+          "name": "MuiTypography",
+          "displayName": "Typography",
+          "variants": [
+            {
+              "label": "H1",
+              "width": 300,
+              "height": 56,
+              "text": "Heading 1",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#111111",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 40,
+              "fontWeight": 700,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "H2",
+              "width": 260,
+              "height": 44,
+              "text": "Heading 2",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#111111",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 32,
+              "fontWeight": 600,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Body",
+              "width": 300,
+              "height": 32,
+              "text": "Body text paragraph",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Caption",
+              "width": 200,
+              "height": 24,
+              "text": "Caption text",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#666666",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Data Display",
+      "components": [
+        {
+          "name": "MuiAvatar",
+          "displayName": "Avatar",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 40,
+              "height": 40,
+              "text": "AB",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#1976D2",
+              "textTokenName": null,
+              "textFallbackHex": "#FFFFFF",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 20,
+              "fontSize": 16,
+              "fontWeight": 600,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiBadge",
+          "displayName": "Badge",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 48,
+              "height": 48,
+              "text": "☆  3",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#FFFFFF",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 12,
+              "fontWeight": 600,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiChip",
+          "displayName": "Chip",
+          "variants": [
+            {
+              "label": "Filled",
+              "width": 80,
+              "height": 32,
+              "text": "Chip",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#E0E0E0",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 16,
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Outlined",
+              "width": 80,
+              "height": 32,
+              "text": "Chip",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#BDBDBD",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 16,
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiDivider",
+          "displayName": "Divider",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 240,
+              "height": 1,
+              "text": "",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#E0E0E0",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiList",
+          "displayName": "List",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 240,
+              "height": 120,
+              "text": "• Item 1\n• Item 2\n• Item 3",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiListItem",
+          "displayName": "ListItem",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 240,
+              "height": 40,
+              "text": "List Item",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiListItemButton",
+          "displayName": "ListItemButton",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 240,
+              "height": 40,
+              "text": "▶ Item",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiListItemIcon",
+          "displayName": "ListItemIcon",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 40,
+              "height": 40,
+              "text": "☆",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#757575",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 20,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiListItemText",
+          "displayName": "ListItemText",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 160,
+              "height": 40,
+              "text": "Primary\nSecondary",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiTable",
+          "displayName": "Table",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 320,
+              "height": 120,
+              "text": "Col A | Col B\n──────────\nRow 1 | Val\nRow 2 | Val",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#E0E0E0",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiTableBody",
+          "displayName": "TableBody",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 320,
+              "height": 80,
+              "text": "Row 1 | Data\nRow 2 | Data",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#E0E0E0",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiTableCell",
+          "displayName": "TableCell",
+          "variants": [
+            {
+              "label": "Header",
+              "width": 120,
+              "height": 40,
+              "text": "Column",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#F5F5F5",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#E0E0E0",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 13,
+              "fontWeight": 600,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Body",
+              "width": 120,
+              "height": 40,
+              "text": "Value",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#E0E0E0",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiTableContainer",
+          "displayName": "TableContainer",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 320,
+              "height": 120,
+              "text": "Table Container",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#E0E0E0",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiTableHead",
+          "displayName": "TableHead",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 320,
+              "height": 40,
+              "text": "Col A | Col B | Col C",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#F5F5F5",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#E0E0E0",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 13,
+              "fontWeight": 600,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiTableRow",
+          "displayName": "TableRow",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 320,
+              "height": 40,
+              "text": "Data | Data | Data",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#E0E0E0",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiTooltip",
+          "displayName": "Tooltip",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 160,
+              "height": 32,
+              "text": "Tooltip text",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#333333",
+              "textTokenName": null,
+              "textFallbackHex": "#FFFFFF",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Feedback",
+      "components": [
+        {
+          "name": "MuiAlert",
+          "displayName": "Alert",
+          "variants": [
+            {
+              "label": "Success",
+              "width": 280,
+              "height": 48,
+              "text": "✓ Success message",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#EDF7ED",
+              "textTokenName": null,
+              "textFallbackHex": "#1E4620",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Error",
+              "width": 280,
+              "height": 48,
+              "text": "✕ Error message",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FDEDED",
+              "textTokenName": null,
+              "textFallbackHex": "#5F2120",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Warning",
+              "width": 280,
+              "height": 48,
+              "text": "⚠ Warning message",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFF4E5",
+              "textTokenName": null,
+              "textFallbackHex": "#663C00",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Info",
+              "width": 280,
+              "height": 48,
+              "text": "ℹ Info message",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#E5F6FD",
+              "textTokenName": null,
+              "textFallbackHex": "#014361",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiCircularProgress",
+          "displayName": "CircularProgress",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 40,
+              "height": 40,
+              "text": "◌",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#1976D2",
+              "borderTokenName": null,
+              "borderFallbackHex": "#1976D2",
+              "borderWidth": 3,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 20,
+              "fontSize": 24,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiDialog",
+          "displayName": "Dialog",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 320,
+              "height": 180,
+              "text": "Dialog Title\n─────────\nContent area\n─────────\n[Cancel] [OK]",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 8,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiDialogActions",
+          "displayName": "DialogActions",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 240,
+              "height": 48,
+              "text": "[Cancel]  [Confirm]",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 14,
+              "fontWeight": 500,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiDialogContent",
+          "displayName": "DialogContent",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 280,
+              "height": 80,
+              "text": "Dialog content goes here",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiDialogContentText",
+          "displayName": "DialogContentText",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 280,
+              "height": 48,
+              "text": "Are you sure you want to proceed?",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#666666",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiDialogTitle",
+          "displayName": "DialogTitle",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 280,
+              "height": 48,
+              "text": "Dialog Title",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#111111",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 20,
+              "fontWeight": 600,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiLinearProgress",
+          "displayName": "LinearProgress",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 240,
+              "height": 8,
+              "text": "",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#BBDEFB",
+              "textTokenName": null,
+              "textFallbackHex": "#1976D2",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiSkeleton",
+          "displayName": "Skeleton",
+          "variants": [
+            {
+              "label": "Text",
+              "width": 200,
+              "height": 16,
+              "text": "",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#E0E0E0",
+              "textTokenName": null,
+              "textFallbackHex": "#E0E0E0",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Rect",
+              "width": 80,
+              "height": 80,
+              "text": "",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#E0E0E0",
+              "textTokenName": null,
+              "textFallbackHex": "#E0E0E0",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiSnackbar",
+          "displayName": "Snackbar",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 280,
+              "height": 48,
+              "text": "Message sent  [Undo]",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#323232",
+              "textTokenName": null,
+              "textFallbackHex": "#FFFFFF",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Navigation",
+      "components": [
+        {
+          "name": "MuiBreadcrumbs",
+          "displayName": "Breadcrumbs",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 240,
+              "height": 24,
+              "text": "Home / Products / Detail",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#1976D2",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiDrawer",
+          "displayName": "Drawer",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 240,
+              "height": 200,
+              "text": "Menu\n─────\n• Home\n• Settings\n• Profile",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#E0E0E0",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiMenu",
+          "displayName": "Menu",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 160,
+              "height": 120,
+              "text": "Option 1\nOption 2\n──────\nOption 3",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#E0E0E0",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiPagination",
+          "displayName": "Pagination",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 240,
+              "height": 36,
+              "text": "‹  1  2  [3]  4  5  ›",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiStep",
+          "displayName": "Step",
+          "variants": [
+            {
+              "label": "Active",
+              "width": 80,
+              "height": 48,
+              "text": "②\nStep 2",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#1976D2",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiStepLabel",
+          "displayName": "StepLabel",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 80,
+              "height": 48,
+              "text": "①\nStep 1",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#757575",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiStepper",
+          "displayName": "Stepper",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 280,
+              "height": 56,
+              "text": "①──②──③──④",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#1976D2",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 12,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiTab",
+          "displayName": "Tab",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 80,
+              "height": 40,
+              "text": "Tab",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#757575",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 14,
+              "fontWeight": 500,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Active",
+              "width": 80,
+              "height": 40,
+              "text": "Tab",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "transparent",
+              "textTokenName": null,
+              "textFallbackHex": "#1976D2",
+              "borderTokenName": null,
+              "borderFallbackHex": "#1976D2",
+              "borderWidth": 2,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 14,
+              "fontWeight": 500,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiTabs",
+          "displayName": "Tabs",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 320,
+              "height": 40,
+              "text": "Tab 1 | Tab 2 | Tab 3",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#757575",
+              "borderTokenName": null,
+              "borderFallbackHex": "#E0E0E0",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 14,
+              "fontWeight": 500,
+              "fontFamily": "Inter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Surfaces",
+      "components": [
+        {
+          "name": "MuiAccordion",
+          "displayName": "Accordion",
+          "variants": [
+            {
+              "label": "Collapsed",
+              "width": 280,
+              "height": 48,
+              "text": "Section Title  ▾",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#E0E0E0",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 500,
+              "fontFamily": "Inter"
+            },
+            {
+              "label": "Expanded",
+              "width": 280,
+              "height": 120,
+              "text": "Section Title  ▴\n─────────────\nContent here...",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": "#1976D2",
+              "borderWidth": 1,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 500,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiAccordionDetails",
+          "displayName": "AccordionDetails",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 280,
+              "height": 72,
+              "text": "Expanded accordion content",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FAFAFA",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiAccordionSummary",
+          "displayName": "AccordionSummary",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 280,
+              "height": 48,
+              "text": "Summary Title  ▾",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 14,
+              "fontWeight": 500,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiAppBar",
+          "displayName": "AppBar",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 360,
+              "height": 56,
+              "text": "☰  App Title",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#1976D2",
+              "textTokenName": null,
+              "textFallbackHex": "#FFFFFF",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 20,
+              "fontWeight": 500,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiCard",
+          "displayName": "Card",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 240,
+              "height": 140,
+              "text": "Card Title\n─────────\nCard content area\n\n[Action]",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 8,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiCardActions",
+          "displayName": "CardActions",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 240,
+              "height": 48,
+              "text": "[Share]  [Learn More]",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#1976D2",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 14,
+              "fontWeight": 500,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiCardContent",
+          "displayName": "CardContent",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 240,
+              "height": 80,
+              "text": "Card Title\nCard body text here.",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiPaper",
+          "displayName": "Paper",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 200,
+              "height": 100,
+              "text": "Paper surface",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#FFFFFF",
+              "textTokenName": null,
+              "textFallbackHex": "#333333",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 4,
+              "fontSize": 14,
+              "fontWeight": 400,
+              "fontFamily": "Inter"
+            }
+          ]
+        },
+        {
+          "name": "MuiToolbar",
+          "displayName": "Toolbar",
+          "variants": [
+            {
+              "label": "Default",
+              "width": 360,
+              "height": 56,
+              "text": "☰  Title  ⋮",
+              "backgroundTokenName": null,
+              "backgroundFallbackHex": "#1976D2",
+              "textTokenName": null,
+              "textFallbackHex": "#FFFFFF",
+              "borderTokenName": null,
+              "borderFallbackHex": null,
+              "borderWidth": 0,
+              "radiusTokenName": null,
+              "radiusFallbackPx": 0,
+              "fontSize": 20,
+              "fontWeight": 500,
+              "fontFamily": "Inter"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
