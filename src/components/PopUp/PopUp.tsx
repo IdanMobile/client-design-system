@@ -1,0 +1,83 @@
+// src/components/PopUp/PopUp.tsx
+import React from 'react';
+import { MuiDialog, MuiDialogTitle, MuiDialogContent, MuiDialogActions, MuiButton } from '../adapters/mui/internal';
+import { SxProps } from '@mui/system';
+
+/**
+ * Props for the PopUp component.
+ */
+export interface PopUpProps {
+  /**
+   * Click handler for the pop-up.
+   */
+  onClick?: () => void;
+  /**
+   * Mouse enter handler for the pop-up.
+   */
+  onHover?: () => void;
+  /**
+   * If true, the pop-up will be disabled.
+   */
+  isDisabled?: boolean;
+  /**
+   * If true, a loading spinner will be shown.
+   */
+  isLoading?: boolean;
+  /**
+   * Content to be displayed inside the pop-up.
+   */
+  children?: React.ReactNode;
+  /**
+   * Style overrides.
+   */
+  sx?: SxProps;
+  /**
+   * Class name overrides.
+   */
+  className?: string;
+}
+
+/**
+ * PopUp component for displaying modal dialogs.
+ */
+const PopUp = React.forwardRef<HTMLDivElement, PopUpProps>(({
+  onClick,
+  onHover,
+  isDisabled,
+  isLoading,
+  children,
+  sx,
+  className
+}, ref) => {
+  return (
+    <MuiDialog
+      onClick={onClick}
+      onMouseEnter={onHover}
+      aria-disabled={isDisabled}
+      open={!isDisabled}
+      ref={ref}
+      className={className}
+      sx={{
+        backgroundColor: 'var(--color-surface, #091C2A)',
+        color: 'var(--color-text-main, #D7E3EC)',
+        borderRadius: 'var(--radius-medium, 8px)',
+        boxShadow: 'var(--shadow-medium, 0px 4px 6px rgba(0, 0, 0, 0.1))',
+        ...sx
+      }}
+    >
+      <MuiDialogTitle>
+        {isLoading ? 'Loading...' : 'Dialog Title'}
+      </MuiDialogTitle>
+      <MuiDialogContent>
+        {isLoading ? 'Please wait...' : children}
+      </MuiDialogContent>
+      <MuiDialogActions>
+        <MuiButton onClick={onClick} disabled={isDisabled}>
+          Close
+        </MuiButton>
+      </MuiDialogActions>
+    </MuiDialog>
+  );
+});
+
+export { PopUp };

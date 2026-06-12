@@ -4,14 +4,11 @@ import { designTokens } from '.';
 
 // ─── CSS-variable helper ─────────────────────────────────────────────────────
 
-/** camelKey + prefix → '--prefix-kebab-key' (splits letter/digit boundaries). */
+/** camelKey + prefix → '--prefix-kebab-key' */
 function toCssVar(camelKey: string, prefix: string): string {
   const kebab = camelKey
     .replace(/([A-Z0-9]+)([A-Z][a-z])/g, '$1-$2')
-    .replace(/([a-z])([A-Z])/g, '$1-$2')
-    .replace(/([a-zA-Z])([0-9])/g, '$1-$2')
-    .replace(/([0-9])([a-zA-Z])/g, '$1-$2')
-    .replace(/-+/g, '-')
+    .replace(/([a-z])([A-Z0-9])/g, '$1-$2')
     .toLowerCase();
   return `${prefix}-${kebab}`;
 }
@@ -29,7 +26,99 @@ export const colorVars = Object.fromEntries(
 
 /** Semantic colour CSS-variable strings (Universal Semantic Model). */
 export const semanticColorVars = {
+  brand500: 'var(--color-brand-500)',
+  actionPrimary: 'var(--color-action-primary)',
+  actionSecondary: 'var(--color-action-secondary)',
+  success500: 'var(--color-success-500)',
+  warning500: 'var(--color-warning-500)',
+  danger500: 'var(--color-danger-500)',
+  background: 'var(--color-background)',
+  surface: 'var(--color-surface)',
+  textMain: 'var(--color-text-main)',
+  textMuted: 'var(--color-text-muted)',
+  borderDivider: 'var(--color-border-divider)',
 } as const;
+
+// ─── Radius ──────────────────────────────────────────────────────────────────
+
+type RadiusKey = keyof typeof designTokens.radius;
+/** All Figma radius tokens as CSS-variable references. */
+export const radiusVars = Object.fromEntries(
+  (Object.keys(designTokens.radius) as RadiusKey[]).map((key) => [
+    key,
+    `var(${toCssVar(key, '--radius')})`,
+  ])
+) as { [K in RadiusKey]: string };
+
+/** Semantic radius CSS-variable strings (small / medium / large / round). */
+export const semanticRadiusVars = {
+  small:  `var(${toCssVar('small',  '--radius')})`,
+  medium: `var(${toCssVar('medium', '--radius')})`,
+  large:  `var(${toCssVar('large',  '--radius')})`,
+  round:  `var(${toCssVar('round',  '--radius')})`,
+} as const;
+
+// ─── Typography ──────────────────────────────────────────────────────────────
+
+type TypographyKey = keyof typeof designTokens.typography;
+/** Per-token font CSS-variable strings, one entry per typography token. */
+export const fontVars = Object.fromEntries(
+  (Object.keys(designTokens.typography) as TypographyKey[]).map((key) => {
+    const prefix = toCssVar(key, '--font');
+    return [key, {
+      family:        `var(${prefix}-family)`,
+      size:          `var(${prefix}-size)`,
+      weight:        `var(${prefix}-weight)`,
+      lineHeight:    `var(${prefix}-line-height)`,
+      letterSpacing: `var(${prefix}-letter-spacing)`,
+      textTransform: `var(${prefix}-text-transform)`,
+    }];
+  })
+) as { [K in TypographyKey]: { family: string; size: string; weight: string; lineHeight: string; letterSpacing: string; textTransform: string } };
+
+// ─── Spacing (gaps) ──────────────────────────────────────────────────────────
+
+type GapKey = keyof typeof designTokens.gaps;
+/** All gap tokens as CSS-variable references. */
+export const spacingVars = Object.fromEntries(
+  (Object.keys(designTokens.gaps) as GapKey[]).map((key) => [
+    key,
+    `var(${toCssVar(key, '--gap')})`,
+  ])
+) as { [K in GapKey]: string };
+
+// ─── Sizes ───────────────────────────────────────────────────────────────────
+
+type SizeKey = keyof typeof designTokens.sizes;
+/** All size tokens as CSS-variable references. */
+export const sizeVars = Object.fromEntries(
+  (Object.keys(designTokens.sizes) as SizeKey[]).map((key) => [
+    key,
+    `var(${toCssVar(key, '--size')})`,
+  ])
+) as { [K in SizeKey]: string };
+
+// ─── Shadows ─────────────────────────────────────────────────────────────────
+
+/** Semantic shadow CSS-variable strings (small / medium / large / inner).
+ *  Falls back to a composed value when no Figma shadow style is bound. */
+export const shadowVars = {
+  small:  'var(--shadow-small,  0px 1.5px 3px  0px var(--color-shadow-color, rgba(0,0,0,0.20)))',
+  medium: 'var(--shadow-medium, 0px 4px   8px  0px var(--color-shadow-color, rgba(0,0,0,0.20)))',
+  large:  'var(--shadow-large,  0px 8px   24px 0px var(--color-shadow-color, rgba(0,0,0,0.20)))',
+  inner:  'var(--shadow-inner,  inset 0px 2px  4px var(--color-shadow-color, rgba(0,0,0,0.15)))',
+} as const;
+
+// ─── Gradients ───────────────────────────────────────────────────────────────
+
+type GradientKey = keyof typeof designTokens.gradients;
+/** All gradient tokens as CSS-variable references. */
+export const gradientVars = Object.fromEntries(
+  (Object.keys(designTokens.gradients) as GradientKey[]).map((key) => [
+    key,
+    `var(${toCssVar(key, '--gradient')})`,
+  ])
+) as { [K in GradientKey]: string };
 
 // ─── Top-level vars object ───────────────────────────────────────────────────
 
@@ -48,6 +137,20 @@ export const vars = {
   color:      semanticColorVars,
   /** All design-token colour CSS-variable strings. */
   colorToken: colorVars,
+  /** Semantic radius CSS-variable strings (small / medium / large / round). */
+  radius:      semanticRadiusVars,
+  /** All design-token radius CSS-variable strings. */
+  radiusToken: radiusVars,
+  /** Per-token font CSS-variable strings. */
+  font: fontVars,
+  /** Gap / spacing CSS-variable strings. */
+  spacing: spacingVars,
+  /** Size token CSS-variable strings. */
+  size: sizeVars,
+  /** Semantic shadow CSS-variable strings (small/medium/large/inner). */
+  shadow: shadowVars,
+  /** Gradient CSS-variable strings. */
+  gradient: gradientVars,
 } as const;
 
 export type Vars = typeof vars;
