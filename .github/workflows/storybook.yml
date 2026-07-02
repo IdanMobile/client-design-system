@@ -4,13 +4,11 @@ on:
   push:
     branches: [main]
   pull_request:
-    types: [opened, synchronize, reopened, closed]
+    types: [opened, synchronize, reopened]
 
 permissions:
-  contents: write
-  pages: write
+  contents: read
   id-token: write
-  pull-requests: write
 
 jobs:
   deploy:
@@ -23,19 +21,19 @@ jobs:
       - run: npm install
       - run: npm run build-storybook
 
-      # PR Preview Deployment
-      - name: Deploy PR Preview
-        uses: rossjrw/pr-preview-action@v1
-        if: github.event_name == 'pull_request'
-        with:
-          source-dir: ./storybook-static/
-          token: ${{ secrets.GITHUB_TOKEN }}
-          action: ${{ github.event.action == 'closed' && 'remove' || 'deploy' }}
-
-      # Main Branch Deployment
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./storybook-static
+      # Upload the built storybook to Guing, which deploys it to a public bucket
+      # path (live instantly — no GitHub Pages queue). Auth is GitHub Actions
+      # OIDC: no secret to configure. Guing resolves the tenant from the signed
+      # `repository` claim and writes the preview URL onto the dashboard + PR.
+      - name: Upload preview to Guing
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          tar -czf storybook.tgz -C storybook-static .
+          OIDC=$(curl -sS -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=guing-storybook-preview" | jq -r '.value')
+          curl -fsS -X POST "https://us-central1-guing-ai.cloudfunctions.net/api/api/v1/storybook" \
+            -H "content-type: application/gzip" \
+            -H "authorization: Bearer $OIDC" \
+            -H "x-guing-pr: $PR_NUMBER" \
+            --data-binary @storybook.tgz
