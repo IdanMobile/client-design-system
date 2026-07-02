@@ -1,0 +1,253 @@
+name: Visual Gate
+
+# DISABLED (not deleted) — the brain already runs visual validation during
+# component generation, so this tenant-side gate is redundant. It now only runs
+# on manual dispatch. To RE-ENABLE on PRs, restore the `pull_request` trigger:
+#   on:
+#     pull_request:
+#       types: [opened, synchronize, reopened]
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+  checks: write
+
+jobs:
+  visual-gate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout DS repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          # Node 22.6+ required for `node --experimental-strip-types` (runs the
+          # vendored visual-gate CLI's .ts files directly).
+          node-version: 22
+
+      - name: Install DS dependencies
+        run: npm install
+
+      - name: Build Storybook
+        run: npm run build-storybook
+
+      - name: Serve Storybook in background
+        run: npx serve storybook-static -l 6006 &
+
+      - name: Wait for Storybook
+        run: npx wait-on http://localhost:6006 --timeout 60000
+
+      - name: Install visual-gate dependencies
+        # The visual-gate CLI is vendored into this repo at .guing/visual-gate by
+        # Guing's scaffolder, so CI is self-contained — no external repo to clone
+        # and no credentials needed.
+        run: |
+          cd .guing/visual-gate
+          npm install
+
+      - name: Install Playwright Chromium
+        run: cd .guing/visual-gate && npx playwright install chromium --with-deps
+
+      - name: Detect AI-generated components (those with a reference PNG)
+        id: changed
+        run: |
+          # AI-generated components always have a matching .reference.png
+          # (written by template-builder.ts alongside the component .tsx)
+          COMPONENTS=$(find src/components -name "*.reference.png" \
+            -exec dirname {} \; | sort -u | xargs -I{} basename {} \
+            | tr '\n' ',' | sed 's/,$//')
+          echo "components=$COMPONENTS" >> "$GITHUB_OUTPUT"
+          echo "Found components with reference PNGs: $COMPONENTS"
+
+      - name: Run visual gate per component
+        id: gate
+        run: |
+          mkdir -p /tmp/vg-results /tmp/vg-output
+          OVERALL="pass"
+          SUMMARY=""
+
+          IFS=',' read -ra COMPS <<< "${{ steps.changed.outputs.components }}"
+          for COMP in "${COMPS[@]}"; do
+            [ -z "$COMP" ] && continue
+
+            # Story title is "Components/{Namespace}" → Storybook 8 ID: "components-{namespace}--default"
+            # For sub-components like "Button Primary" the title is "Components/Button/Primary"
+            # → ID: "components-button-primary--default"
+            STORY_ID="components-$(echo "$COMP" | sed 's/\([A-Z]\)/-\1/g' | tr '[:upper:]' '[:lower:]' | sed 's/^-//')--default"
+            REF_PNG="src/components/${COMP}/${COMP}.reference.png"
+            OUT_JSON="/tmp/vg-results/${COMP}.json"
+
+            if [ ! -f "$REF_PNG" ]; then
+              echo "::warning::No reference PNG for $COMP — skipping"
+              SUMMARY="${SUMMARY}| ⚠️ \`$COMP\` | skipped | — | no reference PNG |\n"
+              continue
+            fi
+
+            node --experimental-strip-types .guing/visual-gate/src/cli.ts \
+              --storyId "$STORY_ID" \
+              --referencePng "$REF_PNG" \
+              --storybookUrl http://localhost:6006 \
+              --outDir /tmp/vg-output \
+              --outputJson "$OUT_JSON" || true
+
+            if [ ! -f "$OUT_JSON" ]; then
+              echo "::warning::No output JSON for $COMP — marking as error"
+              SUMMARY="${SUMMARY}| 🔴 \`$COMP\` | error | — | CLI produced no output |\n"
+              continue
+            fi
+
+            STATUS=$(node -p "JSON.parse(require('fs').readFileSync('$OUT_JSON','utf8')).status")
+            PCT=$(node -p "JSON.parse(require('fs').readFileSync('$OUT_JSON','utf8')).percent.toFixed(2)")
+            MSG=$(node -p "JSON.parse(require('fs').readFileSync('$OUT_JSON','utf8')).message||''")
+
+            case "$STATUS" in
+              pass) ICON="✅" ;;
+              warn) ICON="⚠️"; [ "$OVERALL" = "pass" ] && OVERALL="warn" ;;
+              fail) ICON="❌"; OVERALL="fail" ;;
+              *)    ICON="🔴"; OVERALL="fail" ;;
+            esac
+
+            DETAIL="${PCT}%${MSG:+ — $MSG}"
+            SUMMARY="${SUMMARY}| ${ICON} \`$COMP\` | $STATUS | $DETAIL | |\n"
+          done
+
+          echo "overall=$OVERALL" >> "$GITHUB_OUTPUT"
+          # Pass the table as an ARGUMENT with %b (interprets \n) — never put the
+          # data in the format string: it contains "%" (e.g. "0.00%") which printf
+          # would misread as a format specifier ("invalid format character").
+          printf '%b' "| Component | Status | Detail | Notes |\n|-----------|--------|--------|-------|\n${SUMMARY}" \
+            > /tmp/vg-summary.md
+          cat /tmp/vg-summary.md
+
+      - name: Extract jobId from PR body
+        id: jobid
+        run: |
+          JOB_ID=$(echo "${{ github.event.pull_request.body }}" \
+            | grep -o 'guing-job-id: [a-f0-9-]*' \
+            | sed 's/guing-job-id: //' \
+            | head -1 || true)
+          echo "jobId=$JOB_ID" >> "$GITHUB_OUTPUT"
+          echo "Extracted jobId: $JOB_ID"
+
+      - name: Post gate results to Guing server
+        if: steps.jobid.outputs.jobId != ''
+        env:
+          WEBHOOK_URL: ${{ secrets.GUING_WEBHOOK_URL }}
+          WEBHOOK_SECRET: ${{ secrets.GUING_WEBHOOK_SECRET }}
+        run: |
+          JOB_ID="${{ steps.jobid.outputs.jobId }}"
+          [ -z "$WEBHOOK_URL" ] && { echo "GUING_WEBHOOK_URL not set — skipping callback"; exit 0; }
+
+          # Build componentResults JSON array from per-component output files
+          RESULTS="["
+          FIRST=true
+          for JSON_FILE in /tmp/vg-results/*.json; do
+            [ -f "$JSON_FILE" ] || continue
+            $FIRST || RESULTS="${RESULTS},"
+            RESULTS="${RESULTS}$(cat "$JSON_FILE")"
+            FIRST=false
+          done
+          RESULTS="${RESULTS}]"
+
+          PAYLOAD=$(node -e "
+            const r = JSON.parse(process.argv[1]);
+            console.log(JSON.stringify({
+              jobId: process.argv[2],
+              componentResults: r.map(item => ({
+                component: item.storyId
+                  .replace(/^components-/,'')
+                  .replace(/--[^-]+$/,'')
+                  .replace(/-([a-z])/g, (_,c) => c.toUpperCase()),
+                status: item.status,
+                percent: item.percent,
+                message: item.message || undefined,
+              }))
+            }));
+          " "$RESULTS" "$JOB_ID")
+
+          if [ -n "$WEBHOOK_SECRET" ]; then
+            SIG="sha256=$(echo -n "$PAYLOAD" | openssl dgst -sha256 -hmac "$WEBHOOK_SECRET" | awk '{print $2}')"
+            curl -s -X POST "$WEBHOOK_URL/api/v1/webhook/github" \
+              -H "Content-Type: application/json" \
+              -H "x-github-event: visual_gate_result" \
+              -H "x-hub-signature-256: $SIG" \
+              -d "$PAYLOAD"
+          else
+            curl -s -X POST "$WEBHOOK_URL/api/v1/webhook/github" \
+              -H "Content-Type: application/json" \
+              -H "x-github-event: visual_gate_result" \
+              -d "$PAYLOAD"
+          fi
+          echo "Callback sent for job $JOB_ID"
+
+      - name: Upload diff artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-gate-diffs
+          path: /tmp/vg-output/
+          if-no-files-found: ignore
+
+      - name: Post PR comment
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const overall = '${{ steps.gate.outputs.overall }}';
+            const icon = overall === 'pass' ? '✅' : overall === 'warn' ? '⚠️' : '❌';
+            let table = '';
+            try { table = fs.readFileSync('/tmp/vg-summary.md', 'utf8'); } catch {}
+            const body = [
+              `## ${icon} Visual Gate — ${overall.toUpperCase()}`,
+              '',
+              table || '_No AI-generated components found with reference PNGs._',
+              '',
+              overall !== 'pass'
+                ? '> **To fix:** re-sync from the Figma plugin to regenerate. Do not hand-edit generated output.'
+                : '> All components match their Figma reference within threshold.',
+              '',
+              `_Threshold: 0.1% diff → pass · 0.4% → warn · above → fail_`,
+            ].join('\n');
+
+            // Delete any previous visual-gate comment on this PR to avoid clutter
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            for (const c of comments) {
+              if (c.body && c.body.startsWith('## ') && c.body.includes('Visual Gate')) {
+                await github.rest.issues.deleteComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  comment_id: c.id,
+                });
+              }
+            }
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });
+
+      - name: Set final check status
+        if: always()
+        run: |
+          OVERALL="${{ steps.gate.outputs.overall }}"
+          if [ "$OVERALL" = "fail" ]; then
+            echo "::error::Visual Gate FAILED — one or more components exceed the pixel-diff threshold."
+            exit 2
+          elif [ "$OVERALL" = "warn" ]; then
+            echo "::warning::Visual Gate WARNING — some components have elevated diff (non-blocking)."
+            exit 0
+          else
+            echo "Visual Gate PASSED."
+            exit 0
+          fi
